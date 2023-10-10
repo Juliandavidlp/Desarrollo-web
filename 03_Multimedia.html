@@ -41,10 +41,51 @@
         head de nuestro documento HTML lo siguiente:<br><br>
         
         <b>< link rel="icon" href="nombredelarchivo.ico" ></b></p>
-        <link rel="icon" href="#">
+        <link rel="icon" href="#"><br>
 
 
+    <h2>Audio</h2>
+    <ul><p>La etiqueta <b>< audio ></b> acepta como atributos:</p>
+        <li><b>preload</b>: es usado en el elemento audio para almacenar temporalmente
+        (buffering) archivos de gran tamaño. <a href="https://www.w3schools.com/tags/att_audio_preload.asp">+ info.</a></li>
+        <li><b>src</b>: puede ser la URL de un archivo de audio o una ruta local al mismo. <a href="https://www.w3schools.com/tags/att_audio_src.asp">+ info</a></li>
+        <li><b>controls</b>: muestra los controles estándar para el audio en una página web. <a href="https://www.w3schools.com/tags/att_audio_controls.asp">+ info</a></li>
+        <li><b>autoplay</b>: hace que el audio se reproduzca automáticamente. <a href="https://www.w3schools.com/tags/att_audio_autoplay.asp">+ info</a></li>
+        <li><b>loop</b>: hace que el audio se repita en bucle automáticamente. <a href="https://www.w3schools.com/tags/att_audio_loop.asp">+ info</a></li>
+        <li><b>muted</b>: especifica que la salida de audio debe estar silenciada. <a href="https://www.w3schools.com/tags/att_audio_muted.asp">+ info</a></li>
+    </ul>
+    <a href="https://www.w3schools.com/tags/tag_audio.asp">Más información.</a><br>
 
+    <h2>Video</h2>
+    <ul><p>La etiqueta <b>< video ></b> acepta como atributos:</p>
+        <li><b>controls</b>:permite activar los controles del player. <a href="https://www.w3schools.com/tags/att_video_controls.asp">+ info</a></li>
+        <li><b>poster</b>: muestra una imagen a modo de presentación. <a href="https://www.w3schools.com/tags/att_video_poster.asp">+ info</a></li>
+        <li><b>autoplay, loop, muted, preload y src</b>: tienen la misma función que en la etiqueta audio.</li>
+        <li><b>width</b>: establece el ancho del reproductor de video en píxeles. <a href="https://www.w3schools.com/tags/att_video_width.asp">+ info</a></li>
+        <li><b>height</b>: establece la altura del reproductor de video en píxeles. <a href="https://www.w3schools.com/tags/att_video_height.asp">+ info</a></li>
+    </ul>
+    <a href="https://www.w3schools.com/tags/tag_video.asp">Más información.</a><br>
+    <h2>Iframe</h2>
+    <p>Se utiliza para incrustar otro documento HTML que se cargará en
+        forma independiente en la página actual. Podemos agregar:
+        contenidos de terceros,<br> interfaces de usuario, videos de YouTube,
+        mapas de Google Maps y banners de publicidad desde otro sitio.</p>
+                  
+<p>< <b> iframe src="#página_fuente.html" width="290" height="250"></b>Texto por si el navegador no reconoce la etiqueta <b>< /iframe></b></p>
 
+<ul>
+    <li><b>width y heigth</b>: ancho y alto.</li>
+    <li><b>frameborder</b>:0: sin borde y 1: con borde.</li>
+    <li><b>scrolling</b>: habilita las barras de desplazamiento si el contenido no cabe en el iframe. <br>
+        Con “yes” aparecen siempre, con “auto” aparecen sólo si esnecesario y con “no” no aparecerán nunca.</li>
+</ul>
+
+<h3>Por ejemplo:</h3>
+<!--La charla de Midudev en Nerdearla:-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9gCsqimDa34?si=AX0ObSxrJeJEMQhf" title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br> <br> <br>
+<!--Mi domicilio:-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6544.730865987203!2d-58.03210060282601!3d-34.897277801584956!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2dd95da1d0365%3A0x8fce2f54687433c6!2sC.%2030%2012%2C%20B1897DDF%20Gonnet%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1696964991929!5m2!1ses-419!2sar" 
+width="290" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </body>
 </html>
