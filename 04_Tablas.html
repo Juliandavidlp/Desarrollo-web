@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+<body>
+<h1>Tablas</h1>   
+<ul>
+    <li>Las tablas se usan para <b>representar datos</b>.</li>
+    <li>El ejemplo de aplicación más común son los documentos de Excel</li>
+    <li>En html tenemos que definir los elementos de cada tabla por medio de etiquetas</li>
+    <li>Las tablas no se usan hoy en día para maquetar porque se maqueta con CSS.</li>
+</ul>
+<br>
+
+<h2>Etiquetas</h2>
+<p><b>< table></b>: Representa todo el elemento de la tabla.</p>
+<!--<table> </table>-->
+<p><b>< tr></b>: Table row/register representa una fila o un registro.</p>
+<!--<tr> </tr>-->
+<p><b>< td></b>: Table data cell sirve para representar e insertar celdas.</p>
+<!--<td> </td>-->
+<p><b>< th></b>: Table header sirve para reperesentar un encabezado en una celda, para insertar encabezados.</p>
+<!--<th> </th>-->
+<br>
+
+<h3>Por ejemplo:</h3>
+<!--Una tabla con 3 filas, de las cuales una tiene dos encabezados, en las otras hay dos columnas.-->
+<table>
+    <tr>
+        <th>Día</th>
+        <th>Mes</th>
+    </tr>
+    <tr>
+        <td>10</td><td>Agosto</td>
+    </tr>
+    <tr>
+        <td>14</td><td>Septiembre</td>
+    </tr>
+</table>
+<br>
+<br>
+
+<h3>Los atributos Colspan y Rowspan</h3>
+<p>Son atributos que permiten que una celda ocupe más de una celda o una fila.<br>
+    Es lo que comúnmente llamamos “combinar celdas” a la hora de agrupar celdas en una fila o generar una columna.</p>
+<p><b>Colspan</b>: Indica el número de celdas o columnas a abarcar en una fila.</p>
+<p><b>Rowspan</b>: Indica el número de celdas o filas a abarcar en una columna.</p>
+
+<h3>Por ejemplo:</h3>
+
+<table border="1">
+    <!--Utilizo el atributo border para ponerle un borde.-->
+    <tr>
+        <td rowspan="3">Zona Sur</td>
+        <td>Avellaneda</td>
+        <td>Lanús</td>
+    </tr>
+    <tr>
+        <td colspan="2">Banfield</td>
+    </tr>
+    <tr>
+        <td>Quilmes</td>
+        <td>Berazategui</td>
+    </tr>
+</table>
+<!--Entonces tengo una tabla con tres filas, la primera celda de la primera fila ocupa una columna entera y la segunda celda de la segunda fila ocupa dos celdas.-->
+<!--Existen sitios para validar las páginas HTML. Ejemplo: validator.w3.org.-->
+
+</body>
+</html>
