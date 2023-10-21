@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    
+    <h1>Formularios</h1>
+    <p>Un formulario HTML es una sección de un documento que contiene texto, código, elementos especiales llamados controles: <br> casillas de
+        verificación (checkboxes), botones de opción (radio buttons), menúes, etc.; y rótulos (labels) en esos controles. 
+        Los usuarios normalmente “completan” un formulario<br> modificando los valores de sus controles (introduciendo texto, seleccionando objetos 
+        de un menú, etc.), antes de enviar el formulario a un agente para que lo procese (por ej.: a un servidor web, a un servidor de correo, etc.)</p>
+
+    <h2>Formularios: < form>< / form></h2>
+    <p>Se utiliza la etiqueta contenedora <b>< form ></b>, que incluye todos los campos necesarios
+        para su funcionamiento. Hay tipos de campos adecuados para cada tipo de dato. <br>
+        Existe un control especial, el botón, que puede enviar los datos del formulario al servidor o limpiar el contenido de sus campos.</p>
+
+    <h3>Formularios: atributos action y method</h3>
+    <ul>La etiqueta <b>< form></b> admite diversos
+        atributos. Entre ellos: <br><br>
+
+        <li><b>action</b>: define el tipo de acción que se llevará a cabo (enviar a un mail o procesar su contenido con un script).
+            También podemos indicar la URL a la que se enviará la petición HTTP con toda la información del formulario.</li>
+
+        <li><b>method</b>: indica si la petición HTTP será GET o POST.</li>
+
+        <li><b>enctype</b>: se usa cuando enviamos el formulario por correo y lleva el valor "text/plain" para que el formulario se envíe en forma de texto.</li></ul>
+
+    <h3>Label</h3>
+    <p><b>< label></b>: se usa para especificar la etiqueta (o nombre) del campo del formulario. Es información para el usuario. <br>
+    Admite el atributo for, que debe tener el mismo valor que el atributo id del campo (input, select o textarea) al que hace referencia la etiqueta.</p>
+
+    <!--Por ejemplo:
+    <label for="Nombre">Nombre: </label>
+    <input size="30" type="text" name="Primernombre" id="Nombre">
+    Tener en cuenta esto, porque es importante.-->
+    <h3>Input</h3>
+    <ul>Atributos de la etiqueta < input> : <br><br>
+        <li><b>type</b>: este valor puede tener muchos valores: <b>text, email, checkbox, color, date, file, hidden, etc.</b> en función del tipo de campo que queramos.</li>
+        <li><b>id</b>: este atributo es obligatorio si en el elemento label hay un atributo <b>for</b>, en tal caso deberá contener un identificador único en la página.</li>
+        <li><b>name</b>: representa el nombre asignado al campo cuando se envía la petición HTTP.</li>
+        <li><b>size</b>: define el tamaño de la caja de texto en número de caracteres visibles.</li>
+        <li><b>maxlength</b>: indica el tamaño máximo del texto, en número de caracteres, que puede ser escrito en el campo.</li>
+        <li><b>value</b>: representa el valor que se asignará al campo cuando se envíe la petición HTTP. Permite asignar un valor por defecto al campo.</li>
+    </ul>
+    <h4>El atributo type</h4>
+
+    <ul>El atributo <b>type</b> de la etiqueta < input > valida el tipo de dato de entrada: <br><br>
+        <li><b>text</b>: permite ingresar una cadena alfanumérica</li>
+        <li><b>number</b>: sólo permite seleccionar un número</li>
+        <li><b>date</b>: ofrece un calendario para cargar la fecha</li>
+        <li><b>password</b>: oculta el texto que se está ingresando en el campo.</li>
+        <li><b>email</b>: valida que sea un mail</li>
+        <li><b>url</b>: valida que sea una url</li>
+       <li><b>image</b>: define una imagen como botón de envío</li>
+       <li><b>tel</b>: define un campo para ingresar un número de teléfono</li>
+       <li><b>file</b>: define un campo de selección de archivo</li>
+       <li><b>button</b>: activa código JavaScript cuando se hace clic en él</li>
+       <li><b>checkbox</b>: permite elegir varias opciones</li>
+       <li><b>radio</b>: permite elegir una opción entre varias posibles.</li>
+       <li><b>range</b>: define un control de rango (como un control deslizante)</li>
+       <li><b>submit</b>: el botón enviar</li>
+       <li></li>
+    </ul>
+  
+
+</body>
+</html>
