@@ -8,17 +8,17 @@
 <body>
     
     <h1>Formularios</h1>
-    <p>Un formulario HTML es una sección de un documento que contiene texto, código, elementos especiales llamados controles: <br> casillas de
-        verificación (checkboxes), botones de opción (radio buttons), menúes, etc.; y rótulos (labels) en esos controles. 
+    <p>Un formulario HTML es una sección de un documento que contiene texto, código, elementos especiales llamados <strong>controles</strong>: <br> casillas de
+        verificación (checkboxes), botones de opción (radio buttons), menúes, etc.; y <strong>rótulos</strong> (labels) en esos controles. 
         Los usuarios normalmente “completan” un formulario<br> modificando los valores de sus controles (introduciendo texto, seleccionando objetos 
         de un menú, etc.), antes de enviar el formulario a un agente para que lo procese (por ej.: a un servidor web, a un servidor de correo, etc.)</p>
 
-    <h2>Formularios: < form>< / form></h2>
+    <h2>La etiqueta < form>< / form></h2>
     <p>Se utiliza la etiqueta contenedora <b>< form ></b>, que incluye todos los campos necesarios
         para su funcionamiento. Hay tipos de campos adecuados para cada tipo de dato. <br>
         Existe un control especial, el botón, que puede enviar los datos del formulario al servidor o limpiar el contenido de sus campos.</p>
 
-    <h3>Formularios: atributos action y method</h3>
+    <h3>Atributos action y method</h3>
     <ul>La etiqueta <b>< form></b> admite diversos
         atributos. Entre ellos: <br><br>
 
@@ -29,7 +29,7 @@
 
         <li><b>enctype</b>: se usa cuando enviamos el formulario por correo y lleva el valor "text/plain" para que el formulario se envíe en forma de texto.</li></ul>
 
-    <h3>Label</h3>
+    <h3>La etiqueta Label</h3>
     <p><b>< label></b>: se usa para especificar la etiqueta (o nombre) del campo del formulario. Es información para el usuario. <br>
     Admite el atributo for, que debe tener el mismo valor que el atributo id del campo (input, select o textarea) al que hace referencia la etiqueta.</p>
 
@@ -37,35 +37,123 @@
     <label for="Nombre">Nombre: </label>
     <input size="30" type="text" name="Primernombre" id="Nombre">
     Tener en cuenta esto, porque es importante.-->
-    <h3>Input</h3>
+    <h3>El Input</h3>
     <ul>Atributos de la etiqueta < input> : <br><br>
         <li><b>type</b>: este valor puede tener muchos valores: <b>text, email, checkbox, color, date, file, hidden, etc.</b> en función del tipo de campo que queramos.</li>
         <li><b>id</b>: este atributo es obligatorio si en el elemento label hay un atributo <b>for</b>, en tal caso deberá contener un identificador único en la página.</li>
         <li><b>name</b>: representa el nombre asignado al campo cuando se envía la petición HTTP.</li>
         <li><b>size</b>: define el tamaño de la caja de texto en número de caracteres visibles.</li>
         <li><b>maxlength</b>: indica el tamaño máximo del texto, en número de caracteres, que puede ser escrito en el campo.</li>
-        <li><b>value</b>: representa el valor que se asignará al campo cuando se envíe la petición HTTP. Permite asignar un valor por defecto al campo.</li>
+        <li><b>value</b>: representa el valor que se le asignará al campo cuando se envíe la petición HTTP. Y además, permite asignarle un valor por defecto al campo que estamos escribiendo.</li>
     </ul>
     <h4>El atributo type</h4>
 
-    <ul>El atributo <b>type</b> de la etiqueta < input > valida el tipo de dato de entrada: <br><br>
+    <ul>El atributo <b>type</b> de la etiqueta < input > valida el tipo de dato de entrada y tiene distintos valores posibles: <br><br>
         <li><b>text</b>: permite ingresar una cadena alfanumérica</li>
-        <li><b>number</b>: sólo permite seleccionar un número</li>
+        <li><b>number</b>: permite seleccionar un número</li>
         <li><b>date</b>: ofrece un calendario para cargar la fecha</li>
         <li><b>password</b>: oculta el texto que se está ingresando en el campo.</li>
-        <li><b>email</b>: valida que sea un mail</li>
-        <li><b>url</b>: valida que sea una url</li>
+        <li><b>email</b>: valida que el usuario ingrese un correo</li>
+        <li><b>url</b>: valida que el usuario ingrese una URL</li>
        <li><b>image</b>: define una imagen como botón de envío</li>
        <li><b>tel</b>: define un campo para ingresar un número de teléfono</li>
-       <li><b>file</b>: define un campo de selección de archivo</li>
+       <li><b>file</b>: define un campo en una ubicación para seleccionar un archivo</li>
        <li><b>button</b>: activa código JavaScript cuando se hace clic en él</li>
        <li><b>checkbox</b>: permite elegir varias opciones</li>
        <li><b>radio</b>: permite elegir una opción entre varias posibles.</li>
        <li><b>range</b>: define un control de rango (como un control deslizante)</li>
        <li><b>submit</b>: el botón enviar</li>
-       <li></li>
     </ul>
-  
 
-</body>
+    <h3>Ejemplos</h3>
+
+    <h4>< input type=”password”</h4>
+    <p>El atributo type con el valor “password” sirve para generar un campo input que oculte el texto que ingresa el usuario. <br>Por ejemplo: </p>
+
+    <label for="Contraseña del correo">Ingrese su contraseña:</label>
+    <input type="password" name="Contraseña" size="8" maxlength="10" id="Contraseña del correo">
+    <br>
+
+    <h4>< input type=”checkbox”</h4>
+    <p>Los checkboxes permiten seleccionar algunas opciones de una lista. Se crean utilizando en un input el atributo type con el valor <b>checkbox</b>.<br><br>
+        Para que funcionen como una unidad, cada uno de estos input deben tener su atributo name con el mismo valor. <br>
+        El atributo value contiene el valor que contendrá ese campo cuando la opción correspondiente esté seleccionada. <br>
+        Por ejemplo:
+    </p>
+    <p>Ingrese su preferencia: <input type="checkbox" name="opción" value="1">Otoño 
+                               <input type="checkbox" name="opción" value="2">Invierno 
+                               <input type="checkbox" name="opción" value="3">Primavera
+                               <input type="checkbox" name="opción" value="4">Verano
+    </p>                           
+    <h4>< input type=”radio”</h4>
+    <p>Los radiobutton o simplemente radio, permiten seleccionar una de una lista de opciones. <br>
+        Se crean utilizando en un input el atributo type con el valor <b>radio</b>. <br><br>
+        Para que funcionen como una unidad, cada uno de estos input deben tener su atributo name con el mismo valor. <br> 
+        El atributo value contiene el valor que contendrá el campo cuando la opción correspondiente esté seleccionada. <br>
+        Por ejemplo:
+    </p>
+    <p>Seleccione una opción: <input type="radio" name="opción" value="1">Otoño
+                              <input type="radio" name="opción" value="2">Invierno
+                              <input type="radio" name="opción" value="3">Primavera
+                              <input type="radio" name="opción" value="4">Verano
+    </p>
+   <h4>Botones</h4>
+   <p>Los <strong>botones</strong> que vemos en los formularios también son un input. Se crean configurando el atributo <strong>type</strong> con el valor “submit” o “reset”.</p>
+   <p>Un input del tipo “submit” permite, al ser pulsado, que el formulario envíe los datos de sus campos a la dirección determinada por el atributo <strong>target</strong> de la etiqueta <strong>form</strong>. <br>
+    Un input del tipo “reset” borra el contenido de todos los campos del formulario al ser pulsado. <br>
+    Entonces, por ejemplo:</p>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+    <br><br>
+
+    <h3>La etiqueta fieldset</h3>
+    <p><b>< fieldset></b>: define una sección en un formulario y permite agrupar sus campos. El elemento <b>< legend></b> puede contener a otros elementos o se puede utilizar para definir un título. <br>
+        Puede contener los atributos <b>name, value o id</b> como otros campos, como el input. Por ejemplo:
+    </p>
+   <!--Los estilos se definen con CSS.-->
+    <fieldset name="Las cuatro estaciones" value="1" id="#"><legend>Seleccione una opción:</legend> 
+        <input type="radio" name="opción" value="1">Otoño
+        <input type="radio" name="opción" value="2">Invierno <br>
+        <input type="radio" name="opción" value="3">Primavera
+        <input type="radio" name="opción" value="4">Verano
+    </fieldset>
+    <br><br>
+
+    <h3>La etiqueta textarea</h3>
+    <p>Es <b>para los campos de texto amplios</b>, que permiten el ingreso de varias líneas de texto. Por otro lado, los mismos se pueden expresar como un input.</p>
+    <p>Cuando utilizamos el input para comentarios en línea o consultas hay que agregarle el atributo <b>type</b> con el valor <b>textarea</b>. <br> 
+        Ambas etiquetas nos permiten definir rows (filas), columns (columnas). Si usamos textarea en lugar de utilizar value hay que escribir entre etiquetas.</p>
+        <textarea name="Comentarios" id="Ideas" cols="30" rows="4">Escriba su consulta...</textarea>
+    <br><br>
+
+    <h3>Las etiquetas select u option</h3>
+    <p>Las <b>listas desplegables</b> crean una lista de opciones, cada una contenida dentro de un elemento < option>. <br>
+        Se crean como un input con su atributo type fijado en “select”.</p>
+    <ul>
+        <li><b>size</b>: indica el número de valores mostrados a la vez en la lista. </li>
+        <li><b>multiple</b> permite la selección simultánea de varios elementos de la lista.</li>
+        <li><b>id, value y name</b> se comportan igual que el resto de los tipos de campos vistos.</li>
+    </ul>
+    <label for="Alumno">Seleccione un turno:</label>
+    <select name="Turno" id="Alumno">
+        <option value="1">Mañana</option>
+        <option value="2">Tarde</option>
+        <option value="3">Vespertino</option>
+    </select>
+    <br><br>
+
+    <h4>Atributos opcionales</h4>
+    <p>En muchos de los campos definidos en un formulario podemos añadir otros atributos que modifican su comportamiento:
+        <ul>
+            <li><b>required</b>: el formulario no se podrá enviar hasta que ese campo tenga contenido.</li>
+            <li><b>placeholder</b>: si queremos que aparezca un texto de ayuda para rellenar el campo.</li>
+            <li><b>value</b>: para introducir un valor por defecto en el campo</li>
+            <li><b>readonly</b>: si queremos que sea de sólo lectura.</li>
+        </ul>
+    </p>
+
+
+
+
 </html>
