@@ -10,17 +10,13 @@ def sumar(a,b):
 
 # hello_world()
 # r = sumar(30)
-# numero_1 = int(input('Ingrese un valor 1: '))
-# numero_2 = int(input('Ingrese un valor 2: '))
-
-# print(f'La suma es {sumar(numero_1,numero_2)}')
 
 #Parámetros por defecto:
-def saludar(nombre="Pepe",saludo="Hola"):    
+def saludar(nombre="Damián",saludo="Hola"):    
     print(f'{saludo}, {nombre}')
 
-# saludar('Pedro','Buen día')
-# saludar('Damián')
+# saludar('','Buen día')
+# saludar('Julián')
 # saludar()
 
 #Indicando los argumentos de forma explicita:
