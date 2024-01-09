@@ -57,12 +57,11 @@
 
 <h3>-------------------------------------------------------------------------------</h3>
 <h3>Rutas</h3>
-<p>Cuando hablamos de ruta (o path) nos referimos a la dirección de destino al hacer clic en el link. <br>
-    Esta ruta puede ser absoluta, puede hacer referencia a un dominio externo, o puede ser relativa, 
-    puede hacer referencia a una ubicación interna.</p>
+<p>Cuando hablamos de una ruta (o path) nos referimos a la dirección de destino al hacer clic en el link. <br>
+    Esta ruta puede ser relativa, si hace referencia a una ubicación interna, o puede ser absoluta, si hace referencia a un dominio externo.</p>
 
 <h3>Enlaces</h3>
-<!--Permiten vincular unas páginas con otras. Para hacer esto utilizamos el elemento <a> con
+<!--Permiten vincular unas páginas con otras. Para hacer esto utilizamos la etiqueta <a> con
 el atributo href (Hypertext Reference). Hay 3 tipos de enlaces: 
 -->
 
@@ -73,17 +72,18 @@ el atributo href (Hypertext Reference). Hay 3 tipos de enlaces:
 
 <p>Enlaces relativos</p>
 <!-- Hacen referencia a los recursos que se encuentran en una posición relativa a nuestra URL. Por ej.:-->
-<a href="imagen1.jpg">Ver imagen</a>
+<a href="./imagen1.jpg">Ver imagen</a>
 
 <p>Enlaces internos o anclas</p>
-<!--Se utilizan para indicar elementos dentro de la misma página, dirigiéndose a un sector específico. 
-    Para utilizarlo necesitamos el enlace y el nombre (name) del ancla a la que queremos dirigirnos.-->
+<!--Se utilizan para indicar elementos dentro de nuestra página web, dirigiendo al usuario a un sector específico. 
+    Para utilizarlos necesitamos el enlace y el nombre (del atributo name) del ancla a la que queremos dirigirnos.-->
 
 <a href="#Listas">Ir a listas</a>
 <a name="Listas"></a>
 
 <!--Incluso se pueden vincular a anclas dentro de otra página de destino. 
-    En este caso, es igual, hay que referenciar el archivo html, la sección -con un #- y el ancla correspondiente:-->
+    En ese caso, es igual, dentro del atributo href hay que referenciar el archivo html, la sección -con un #- y el ancla correspondiente.
+    Por ejemplo:-->
 
 <a href="01_Etiquetas básicas.html#section">Ir a etiquetas</a>
 <a name="section"></a>
