@@ -125,40 +125,41 @@
     <h3>La etiqueta textarea</h3>
     <p><strong>Es para los campos de texto amplios</strong>, que permiten el ingreso de varias líneas de texto. <br>
         Por otro lado, los misma etiqueta se puede expresar como un input. Cuando utilizamos el input para comentarios o consultas <br>
-        en línea hay que agregar el atributo <strong>type</strong> con el valor <b>textarea</b>. Ambas etiquetas nos permiten definir rows (filas) y cols (columnas) como atributos específicos.<br> 
+        en línea hay que agregar el atributo <strong>type</strong> con el valor <strong>textarea</strong>. Ambas etiquetas nos permiten definir rows (filas) y cols (columnas) como atributos específicos.<br> 
         Y en el caso de usar textarea, en lugar de utilizar el atributo value hay que escribir entre etiquetas. Por ej.:</p><br>
         <textarea name="Comentarios" id="Ideas" cols="30" rows="4">Escriba su consulta...</textarea>
         <br><br>
 
     <h3>Las etiquetas select u option</h3>
-    <p>Las <b>listas desplegables</b> crean una lista de opciones, cada una contenida dentro de un elemento < option >. <br>
-        Se crean como un input con su atributo type fijado en “select”.</p>
+    <p>Las <strong>listas desplegables</strong> crean una lista de opciones, cada una contenida dentro de un elemento < option >. <br>
+        Se crean como un input con el atributo type fijado en “select”, o a partir de la etiqueta select u option.<br>
+        Pueden contener distintos atributos:</p>
     <ul>
-        <li><b>size</b>: indica el número de valores mostrados a la vez en la lista. </li>
-        <li><b>multiple</b> permite la selección simultánea de varios elementos de la lista.</li>
-        <li><b>id, value y name</b> se comportan igual que el resto de los tipos de campos vistos.</li>
+        <li><strong>size</strong>: indica el número de valores mostrados a la vez en la lista. </li>
+        <li><strong>multiple</strong> permite la selección simultánea de varios elementos de la lista.</li>
+        <li><strong>id, value y name</strong> se comportan igual que en los otros campos.</li>
     </ul>
+        
+    <p><strong>Por ejemplo:</strong></p><br>
+        
     <label for="Heladería">Seleccione un gusto:</label>
     <select name="Gustos..." id="Heladería">
         <option value="1">Limón</option>
         <option value="2">Ananá</option>
         <hr><!--Con el elemento hr añado una línea para separar las opciones del select-->
-        <option value="3">Frutilla</option>
+        <option value="3">Dulce de leche granizado</option>
         <option value="4">Tramontana</option>
     </select>
     <br><br>
 
+    <footer>
     <h4>Atributos opcionales</h4>
-    <p>En muchos de los campos definidos en un formulario podemos añadir otros atributos que modifican su comportamiento:
+    <p>En muchos de los campos definidos en un formulario podemos añadir otros atributos que modifican su comportamiento:</p>
         <ul>
             <li><b>required</b>: el formulario no se podrá enviar hasta que ese campo tenga contenido.</li>
             <li><b>placeholder</b>: si queremos que aparezca un texto de ayuda para rellenar el campo.</li>
             <li><b>value</b>: para introducir un valor por defecto en el campo</li>
-            <li><b>readonly</b>: si queremos que sea de sólo lectura.</li>
+            <li><b>readonly</b>: si queremos que el campo sea de sólo lectura.</li>
         </ul>
-    </p>
-
-
-
-
+    </footer>
 </html>
