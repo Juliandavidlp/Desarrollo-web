@@ -11,59 +11,59 @@
     <p>Un formulario HTML es una sección de un documento que contiene texto, código, elementos especiales llamados <strong>controles</strong>: <br> casillas de
         verificación (checkboxes), botones de opción (radio buttons), menús, etc.; y <strong>rótulos</strong> (labels) en esos controles. 
         Los usuarios normalmente “completan” un formulario<br> modificando los valores de sus controles (introduciendo texto, seleccionando objetos 
-        de un menú, etc.), antes de enviar el formulario a un agente para que lo procese (por ej.: a un servidor web, a un servidor de correo, etc.)</p>
+        de un menú, etc.), antes de enviar el formulario a un agente para que lo procese (por ej.: a un servidor web o a un servidor de correo).</p>
 
     <h2>La etiqueta < form>< / form></h2>
     <p>Se utiliza la etiqueta contenedora <b>< form ></b>, que incluye todos los campos necesarios
         para su funcionamiento. Hay tipos de campos adecuados para cada tipo de dato. <br>
-        Existe un control especial, el botón, que puede enviar los datos del formulario al servidor o limpiar el contenido de sus campos.</p>
+        Existe un elemento especial, el botón, que puede enviar los datos del formulario al servidor o limpiar el contenido de sus campos.</p>
 
     <h3>Atributos action y method</h3>
     <ul>La etiqueta <b>< form></b> admite diversos
         atributos. Entre ellos: <br><br>
 
         <li><b>action</b>: define el tipo de acción que se llevará a cabo (enviar a un mail o procesar su contenido con un script).
-            También podemos indicar la ruta a la que se enviará la petición HTTP con la información del formulario.</li>
+            Aquí debemos indicar la ruta a la que se enviará la petición HTTP con la información del formulario.</li>
 
         <li><b>method</b>: indica si la petición HTTP será GET o POST. Ojo, a este atributo hay que agregarlo.</li>
 
-        <li><b>enctype</b>: se usa cuando enviamos el formulario por correo y lleva el valor "text/plain" para que el formulario se envíe en forma de texto.</li></ul>
+        <li><b>enctype</b>: se usa cuando enviamos el formulario por correo y lleva el valor "text/plain" para que el formulario se envíe en forma de texto plano.</li></ul>
 
     <h3>La etiqueta Label</h3>
-    <p><b>< label></b>: se usa para especificar la etiqueta o el nombre del campo del formulario. Es información para el usuario. <br>
+    <p><b>< label></b>: se usa para especificar el nombre de un campo -un elemento- dentro de un formulario, y es información para el usuario. <br>
     Admite el atributo for, que debe tener el mismo valor que el atributo id del campo asociado (input, select o textarea).</p>
 
     <!--Por ejemplo:
     <label for="Nombre">Nombre: </label>
     <input size="30" type="text" name="Primernombre" id="Nombre">
-    Tener en cuenta esto, porque es importante.-->
+    Tener esto en cuenta porque es importante.-->
 
     <h3>El Input</h3>
     <ul>Atributos de la etiqueta < input> : <br><br>
-        <li><b>type</b>: este valor puede tener muchos valores: <b>text, email, checkbox, color, date, file, hidden, etc.</b> en función del tipo de campo que queremos que ingrese el usuario.</li>
+        <li><b>type</b>: este atributo puede tener distintos valores o posibilidades: <b>text, email, checkbox, color, date, file, hidden, etc.</b> en función del tipo de campo que queremos que ingrese el usuario.</li>
         <li><b>id</b>: este atributo es obligatorio si en el elemento label hay un atributo <b>for</b>, en tal caso el input debe coincidir con el elemento al que se refiere y contener un identificador único en la página. <strong>Hay que agregarlo</strong></li>
         <li><b>name</b>: representa el nombre asignado al campo cuando se envía la petición HTTP.</li>
         <li><b>size</b>: define el tamaño de la caja de texto en número de caracteres visibles.</li>
         <li><b>maxlength</b>: indica el tamaño máximo del texto, en número de caracteres, que puede ser escrito en el campo.</li>
-        <li><b>value</b>: representa el valor que se le asignará al campo cuando se envíe la petición HTTP. Y además, permite asignarle un valor por defecto al campo que estamos escribiendo.</li>
+        <li><b>value</b>: representa el valor que se le asignará al campo cuando se envíe la petición HTTP. Permite asignarle un valor por defecto al campo.</li>
     </ul>
     <h4>El atributo type</h4>
 
-    <ul>El atributo <b>type</b> de la etiqueta < input > valida el tipo de dato de entrada y tiene distintos valores posibles: <br><br>
+    <ul>El atributo <b>type</b> de la etiqueta < input > valida el tipo de dato de entrada que ingresa el usuario, tiene distintos valores posibles: <br><br>
         <li><b>text</b>: permite ingresar una cadena alfanumérica</li>
-        <li><b>number</b>: permite seleccionar un número</li>
+        <li><b>number</b>: permite validar un número ingresado por el usuario</li>
         <li><b>date</b>: ofrece un calendario para cargar una fecha</li>
-        <li><b>password</b>: oculta el texto que se está ingresando en el campo.</li>
-        <li><b>email</b>: valida que el usuario ingrese un correo electrónico</li>
+        <li><b>password</b>: oculta el texto que ingresamos.</li>
+        <li><b>email</b>: valida que el usuario ingrese un correo de manera nativa, un correo electrónico válido</li>
         <li><b>url</b>: valida que el usuario ingrese una URL</li>
        <li><b>image</b>: define una imagen como botón de envío</li>
-       <li><b>tel</b>: define un campo para ingresar un número de teléfono</li>
-       <li><b>file</b>: define un campo en una ubicación para seleccionar un archivo</li>
+       <li><b>tel</b>: define un campo para ingresar un número de teléfono. <!--Y si uso el atributo pattern valido que el usuario ingrese un teléfono con un patrón especificado--></li>
+       <li><b>file</b>: define un campo en una ubicación para seleccionar y subir un archivo</li>
        <li><b>button</b>: activa código JavaScript cuando se hace clic en él</li>
        <li><b>checkbox</b>: permite elegir varias opciones</li>
        <li><b>radio</b>: permite elegir una opción entre varias posibles.</li>
        <li><b>range</b>: define un control de rango (como un control deslizante)</li>
-       <li><b>submit</b>: el botón enviar</li>
+       <li><b>submit</b>: el botón enviar</li> <!--Dentro de un formulario, excepto usemos el atributo type con el valor button, los botones por defecto son de tipo submit-->
     </ul>
 
     <h3>Ejemplos</h3>
@@ -157,7 +157,7 @@
     <p>En muchos de los campos definidos en un formulario podemos añadir otros atributos que modifican su comportamiento:</p>
         <ul>
             <li><strong>required</strong>: el formulario no se podrá enviar hasta que ese campo tenga contenido.</li>
-            <li><strong>placeholder</strong>: si queremos que aparezca un texto de ayuda para rellenar el campo.</li>
+            <li><strong>placeholder</strong>: si queremos que aparezca un texto de ayuda para rellenar el campo, por ejemplo cuando le pedimos al usuario que ingrese un correo.</li>
             <li><strong>value</strong>: para introducir un valor por defecto en el campo</li>
             <li><strong>readonly</strong>: si queremos que el campo sea de sólo lectura.</li>
         </ul>
