@@ -96,10 +96,14 @@
         El atributo value contiene el valor que contendrá el campo cuando la opción correspondiente esté seleccionada. <br>
         Por ejemplo:
     </p><!-- Acá es parecido-->
-    <p>Seleccione una opción: <input type="radio" name="opción" value="1">Otoño
+    <p>Seleccione una opción: <input type="radio" name="opción" value="1" checked>Otoño <!-- Puedo usar el atributo checked para preseleccionar una opción-->
                               <input type="radio" name="opción" value="2">Invierno
                               <input type="radio" name="opción" value="3">Primavera
                               <input type="radio" name="opción" value="4">Verano
+        
+    </p>Las casillas de verificación son similares a los botones de opción, pero con una distinción: 
+        los botones opción están diseñados para seleccionar un valor de un conjunto, mientras que las casillas de verificación periten activar y desactivar valores individuales.
+        Cuando existen varios controles, los botones de opción permiten seleccionar uno, mientras que las casillas de verificacción permiten seleccionar valores varios.
     </p>
    <h4>Botones</h4>
    <p>Los <strong>botones</strong> que vemos en los formularios también son un input. Se crean configurando el atributo <strong>type</strong> con el valor “submit” o “reset”.</p>
