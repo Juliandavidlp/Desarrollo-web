@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+</header>
+
+<!-- Entre el header y el main, escribo una modal encima del contenido, como cuando abrimos un diario. -->
+<dialog id="dialog"> <!--Puedo hacer que quede abierta con el valor open-->
+    <h1>Puedo abrir una modal.</h1>
+    <p>Es totalmente nativa!</p>
+   <button id="hide">Cerrar</button>
+</dialog>
+
+<button id="show">Ver más información</button>
+
+<script>
+
+    window.show.addEventListener('click', () => {
+        window.dialog.showModal()
+    })
+
+    window.hide.addEventListener('click', () => {
+        window.dialog.close()
+    })
+
+</script> <!--Cada vez que trabajo con un id, un identificador sobre un elemento en html, 
+              me va a crear una propiedad en el window con el nombre de ese id-->
+    
+<body>
+</body>
+</html>
