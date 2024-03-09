@@ -10,13 +10,13 @@
     <p>Imágenes, video, audio, iframes</p>
 
     <h2>Imágenes</h2>
-    <p>Para mostrar una imagen en una página tenemos dos formas de hacerlo. Una es usando el elemento <b>< img/ ></b>, otra mediante CSS, que veremos más adelante. <br>
+    <p>Para mostrar una imagen en una página tenemos dos formas de hacerlo. Una es usando el elemento <strong>< img/ ></strong>, otra mediante CSS, que veremos más adelante. <br>
         La etiqueta img requiere de dos atributos obligatorios: <b>src</b> (de source) y <b>alt</b> (de alternative).
         </p>
         <!--Por ejemplo:-->
-        <img src="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg" alt="Imagen sobre programación">
+        <img src="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg" alt="Imagen sobre programación" title="Imagen">
 
-    <h3>Usamos <b>alt</b> para:</h3> 
+    <h3>Usamos <strong>alt</strong> para:</h3> 
     <ul>
         <li>Posicionamiento en buscadores (extrayendo palabras clave)</li>
         <li>Personas con dificultades visuales (lectores de páginas Web)</li>
@@ -26,7 +26,10 @@
 
     <h3>Con height y width podemos definir el alto y el ancho de la imagen:</h3>
     <!--Por ejemplo:-->
-    <img src="https://cdn.euroinnova.edu.es/img/subidasEditor/diseño%20sin%20título%20(24)-1657278510.webp" alt="Un comentario sobre la imagen" height="260" width="500">
+    <img 
+        id="photo-image" title="image" src="https://cdn.euroinnova.edu.es/img/subidasEditor/diseño%20sin%20título%20(24)-1657278510.webp" alt="Un comentario sobre la imagen"
+        height="260" 
+        width="500">
 
     <h3>Por otro lado, además podemos utilizar una imagen como un enlace <b>combinando las etiquetas < a > e < img >:</b></h3>
     <!--Por ejemplo:-->
@@ -56,6 +59,7 @@
         <li><b>muted</b>: especifica que la salida de audio debe estar silenciada. <a href="https://www.w3schools.com/tags/att_audio_muted.asp">+ info</a></li>
     </ul>
     <a href="https://www.w3schools.com/tags/tag_audio.asp">Más información.</a><br>
+    <!-- <audio autoplay controls src=""></audio> -->
 
     <h2>Video</h2>
     <ul><p>La etiqueta <b>< video ></b> acepta como atributos:</p>
@@ -66,6 +70,9 @@
         <li><b>height</b>: establece la altura del reproductor de video en píxeles. <a href="https://www.w3schools.com/tags/att_video_height.asp">+ info</a></li>
     </ul>
     <a href="https://www.w3schools.com/tags/tag_video.asp">Más información.</a><br>
+         <!-- <video  autoplay loop muted poster="/" src="./PIAZZOLLA - CAFE 1930.mp4"></video> -->
+        <!--En la etiqueta video controls va sin autoplay. Y el atributo autoplay funciona con muted, sino no funciona.-->
+
     <h2>Iframe</h2>
     <p>Se utiliza para incrustar otro documento HTML que se va a cargar en forma independiente en la página actual. Podemos agregar:
         contenidos de terceros,<br> interfaces de usuario, videos de YouTube, mapas de Google Maps o banners de publicidad desde otro sitio.</p>
