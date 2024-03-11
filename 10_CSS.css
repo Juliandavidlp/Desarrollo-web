@@ -1,0 +1,81 @@
+/* CSS
+Es un lenguaje de diseño que nos permite darle estilos a los 
+componentes de un documento en función de una jerarquía. Se ocupa 
+de la estética, el aspecto.
+
+CSS es una sigla que proviene de Cascading StyleSheets (Hojas de Estilo 
+en Cascada, en español). La palabra cascada hace referencia a una 
+propiedad muy importante de CSS, y es la forma en que se comporta 
+cuando entran en conflicto dos o más reglas de estilo.
+
+Cuando diseñamos un sitio web profesional, con un equipo de trabajo, 
+mantener los estilos separados de la estructura y contenido (HTML) 
+facilita la división de tareas entre los desarrolladores */
+
+/* 
+¿Cómo incorporamos CSS?
+
+
+CSS en Línea:
+
+Dentro del atributo style=”” incorporamos los estilos que se van a 
+aplicar en una etiqueta. Esto es una opción no recomendable.
+Por ej.: <p style="color: white; background-color: violet">Esto es un párrafo
+
+Utilizando el atributo style dentro de una etiqueta le proporcionamos estilo a la misma. 
+Se pueden utilizar a la vez varias parejas de: propiedad: valor 
+
+CSS Interno: 
+
+Incluimos la etiqueta <style> dentro del <head> en nuestro 
+documento. Opción menos recomendable. Por ej.: 
+
+<head>
+    <style>
+        h1{
+            color:white;
+            background-color: red;
+            <!--En el ejemplo todas las etiquetas <h1> tendrán color de fuente blanco  
+            y un fondo de color rojo.
+-->
+    </style>
+</head>
+
+CSS Externo: 
+
+En el head del documento HTML tenemos que incluir una referencia al 
+archivo .css dentro del elemento <link> por medio de la relación "stylesheet". 
+Es la forma más recomendada. La referencia al archivo externo debe incluir la ruta completa,
+el nombre del  archivo y su extensión si se encuentra en alguna subcarpeta dentro del proyecto.
+En caso de que el archivo de estilos se encuentre en la misma carpeta que el 
+documento HTML, únicamente se debe incluir el nombre del archivo y su 
+extensión. Recordemos que es aconsejable mantener estos archivos (CSS y HTML) 
+en carpetas separadas. Por ejemplo: 
+
+<head>
+    <link rel="stylesheet" href="css/estilos.css" o href="estilos.css">
+</head>
+
+*/
+/*
+
+Estructura
+
+Selector: Indica el elemento al que le vamos a aplicar una regla de estilo.
+Propiedad y Valor: Especifican qué característica voy a afectar de un elemento, qué valor tomará este.
+Bloque de declaración: Lo que está entre corchetes indica el estilo que le daremos al selector. Por ej.:
+*/
+
+h1{ 
+    color: blue;
+    font-size: 24px;
+}
+
+/* 
+Los estilos se heredan de una etiqueta a otra. Si tenemos declarado en el <body>
+unos estilos, en muchos casos, estas declaraciones también afectarán a etiquetas que estén dentro del body.
+
+
+*/
+
+
