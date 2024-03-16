@@ -1,4 +1,12 @@
-/* CSS
+/* 
+Resumen:
+● Bases del CSS y atributo class.
+● CSS externo, interno y en línea.
+● Selectores básicos (id, clase, etiqueta, universal).
+● Especificidad, Herencia, Cascada y Orden de las reglas en CSS.
+
+CSS
+
 Es un lenguaje de diseño que nos permite darle estilos a los 
 componentes de un documento en función de una jerarquía. Se ocupa 
 de la estética, el aspecto.
@@ -22,8 +30,8 @@ Dentro del atributo style=”” incorporamos los estilos que se van a
 aplicar en una etiqueta. Esto es una opción no recomendable.
 Por ej.: <p style="color: white; background-color: violet">Esto es un párrafo
 
-Utilizando el atributo style dentro de una etiqueta le proporcionamos estilo a la misma. 
-Se pueden utilizar a la vez varias parejas de: propiedad: valor 
+Utilizando el atributo style dentro de una etiqueta le proporcionamos estilo
+a la misma. Se pueden utilizar a la vez varias parejas de "propiedad: valor;".
 
 CSS Interno: 
 
@@ -35,22 +43,21 @@ documento. Opción menos recomendable. Por ej.:
         h1{
             color:white;
             background-color: red;
-            <!--En el ejemplo todas las etiquetas <h1> tendrán color de fuente blanco  
-            y un fondo de color rojo.
--->
+            <!--Todas las etiquetas <h1> tendrán color de fuente blanco  
+            y un fondo de color rojo.-->
     </style>
 </head>
 
 CSS Externo: 
 
 En el head del documento HTML tenemos que incluir una referencia al 
-archivo .css dentro del elemento <link> por medio de la relación "stylesheet". 
-Es la forma más recomendada. La referencia al archivo externo debe incluir la ruta completa,
-el nombre del  archivo y su extensión si se encuentra en alguna subcarpeta dentro del proyecto.
-En caso de que el archivo de estilos se encuentre en la misma carpeta que el 
-documento HTML, únicamente se debe incluir el nombre del archivo y su 
-extensión. Recordemos que es aconsejable mantener estos archivos (CSS y HTML) 
-en carpetas separadas. Por ejemplo: 
+archivo .css dentro del elemento <link> por medio de la relación "stylesheet" y
+el atributo href. Es la forma más recomendada. La referencia al archivo externo
+debe incluir la ruta completa, el nombre del archivo y su extensión si se encuentra
+en alguna subcarpeta dentro del proyecto. En caso de que el archivo de estilos 
+se encuentre en la misma carpeta que el documento HTML, únicamente se debe incluir 
+el nombre del archivo y su extensión. Recordemos que es aconsejable mantener estos
+archivos (CSS y HTML) en carpetas separadas. Por ejemplo: 
 
 <head>
     <link rel="stylesheet" href="css/estilos.css" o href="estilos.css">
@@ -62,20 +69,128 @@ en carpetas separadas. Por ejemplo:
 Estructura
 
 Selector: Indica el elemento al que le vamos a aplicar una regla de estilo.
-Propiedad y Valor: Especifican qué característica voy a afectar de un elemento, qué valor tomará este.
-Bloque de declaración: Lo que está entre corchetes indica el estilo que le daremos al selector. Por ej.:
+Propiedad y Valor: Especifican qué característica voy a afectar de un elemento, 
+qué valor tomará el mismo.
+Bloque de declaración: Lo que está entre corchetes indica los estilos que le daremos
+al selector. Ej.:
 */
 
 h1{ 
     color: blue;
-    font-size: 24px;
+    font-size: 24 px;
 }
 
 /* 
 Los estilos se heredan de una etiqueta a otra. Si tenemos declarado en el <body>
-unos estilos, en muchos casos, estas declaraciones también afectarán a etiquetas que estén dentro del body.
+unos estilos, en muchos casos, estas declaraciones también afectarán a etiquetas 
+que estén dentro de este.
+*/
+/* 
+
+Selectores
+
+Indican el elemento al que se debe aplicar el estilo. La declaración indica "qué hay que
+hacer" y el selector indica "a quién hay que aplicarlo". Hay cuatro selectores básicos:
+
+● selector universal: Selecciona todos los elementos de HTML.
+● selector de etiqueta o tipo: Se utiliza para seleccionar una etiqueta específica.
+● selector de clase: Se utiliza agregando el atributo class a los elementos que queramos
+                     aplicarles estilos en html.
+● selector de identificador (id): Similar a .class pero solo se aplica a una etiqueta 
+                     con un id específico.
 
 
+Selector universal (*)
+
+Se indica con un * (asterisco) y aplica el estilo a todos los elementos contenidos en el
+documento HTML. Po ej.:
 */
 
+*{
+    margin: 10 px; /*margin establece el margen para los cuatro lados*/
+    padding: 5 px; /*padding establece el espacio de relleno*/
+    background-color: lightgreen; /*cambia el color de relleno*/
+    font-family: Verdana; /*cambia el tipo de letra*/
+}
 
+/* 
+Selector de etiqueta o elemento (<tag>)
+
+Este selector afecta a una etiqueta específica. Esto nos permite ser más precisos a la
+hora de aplicar estilos a elementos particulares. Por ejemplo, a todas las etiquetas
+<h1> o <p> del documento. Por ej.:
+*/
+
+h1 {
+    color: lightblue;
+    background-color: blue;
+}
+
+p {
+    color: black;
+    font-style: italic;
+    font-size: 130 %;
+}   
+
+/* 
+Selector de clase (.selector)
+
+Se aplica con un punto (.) seguido del nombre que le asignemos al selector. Dentro
+del documento HTML se lo referencia dentro de la etiqueta usando el atributo class,
+con la siguiente estructura: class=“nombredelselector”. Por ejemplo: 
+*/
+
+.subtitulos {
+    margin-left: 50 px;
+    color: yellowgreen;
+    background-color: olivedrab;
+    }
+
+/* En HTML: <h3 class="subtitulos">Selectores de clase</h3> */
+
+/* 
+Selector de id (#selector)
+
+Se coloca con un numeral (#) en CSS y en el documento HTML se hace
+referencia al selector con id=“nombredelselector”, dentro de la etiqueta a la
+cual se aplica: 
+*/
+
+#texto {
+    color: white;
+    background-color: violet;
+    text-align: center;
+    margin-left: 100 px;
+   }
+
+/* <div id="texto"> Selector de id aplicado a una etiqueta div </div> */
+
+/*
+
+Div y Span (contenedores de información)
+
+div (división): Es un elemento en bloque. Sirve para crear secciones o
+agrupar contenidos. Sus etiquetas son <div> y </div> (ambas
+obligatorias). Crea una caja, que puede contener texto y/u otras
+etiquetas, que se separa de la caja anterior con un salto a la línea
+siguiente. 
+
+span (abarcar): Es un elemento en línea. Sirve para aplicar estilo al
+texto o agrupar elementos uno a continuación del otro. Sus etiquetas
+son <span> y </span> (ambas obligatorias). Crea una caja que puede
+contener texto y/u otras etiquetas que se adapten al ancho del
+contenedor. 
+
+Ejemplos:
+
+<!--Elementos en bloque-->
+<div style="color:darkgreen">Un texto con div</div>
+<div style="background-color:lightblue">Otro texto con div</div>
+
+<!-- Elementos en línea-->
+<span style="color:red">Un texto en span </span>
+<span style="color:blue">Otro texto en span</span>
+
+Nota: Se puede hacer que un span se comporte como un div si en CSS le agrego 
+display:block. +info: https://www.w3schools.com/css/css_inline-block.asp
+*/
