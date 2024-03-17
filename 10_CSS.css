@@ -164,7 +164,6 @@ cual se aplica:
    }
 
 /* <div id="texto"> Selector de id aplicado a una etiqueta div </div> */
-
 /*
 
 Div y Span (contenedores de información)
@@ -185,11 +184,11 @@ Ejemplos:
 
 <!--Elementos en bloque-->
 <div style="color:darkgreen">Un texto con div</div>
-<div style="background-color:lightblue">Otro texto con div</div>
+<div style="background-color:lightblue">Otro contenedor distinto</div>
 
 <!-- Elementos en línea-->
 <span style="color:red">Un texto en span </span>
-<span style="color:blue">Otro texto en span</span>
+<span style="color:blue">En la misma línea otro texto en span</span>
 
 Nota: Se puede hacer que un span se comporte como un div si en CSS le agrego 
 display:block. +info: https://www.w3schools.com/css/css_inline-block.asp
