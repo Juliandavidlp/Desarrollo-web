@@ -192,4 +192,26 @@ Ejemplos:
 
 Nota: Se puede hacer que un span se comporte como un div si en CSS le agrego 
 display:block. +info: https://www.w3schools.com/css/css_inline-block.asp
+
+Atributos globales
+
+Estos atributos pueden utilizarse con todos los elementos HTML:
+
+● style="estilo CSS": Especifica un estilo CSS conforme al elemento. 
+        +info: https://www.w3schools.com/tags/att_global_style.asp
+
+● class="texto": Especifica uno o más nombres de clases para un elemento
+        (haciendo referencia a una clase en una hoja de estilo). 
+        +info: https://www.w3schools.com/tags/att_global_class.asp
+
+● id="texto": Especifica un id único por cada página. 
+        +info: https://www.w3schools.com/tags/att_global_id.asp
+
+● title="texto": Especifica información extra sobre un elemento (Tooltip Text).
+
+● hidden: Evita que el elemento y sus descendientes se muestran en el
+navegador. Cualquier control de formulario o de script dentro de la sección
+hidden será ejecutado, aunque no se muestra al usuario. 
+
 */
+
