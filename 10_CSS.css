@@ -193,6 +193,7 @@ Ejemplos:
 Nota: Se puede hacer que un span se comporte como un div si en CSS le agrego 
 display:block. +info: https://www.w3schools.com/css/css_inline-block.asp
 
+
 Atributos globales
 
 Estos atributos pueden utilizarse con todos los elementos HTML:
@@ -213,5 +214,41 @@ Estos atributos pueden utilizarse con todos los elementos HTML:
 navegador. Cualquier control de formulario o de script dentro de la sección
 hidden será ejecutado, aunque no se muestra al usuario. 
 
+
+Especificidad
+
+La especificidad es el mecanismo mediante el cual los navegadores deciden qué
+valores de una propiedad CSS son más relevantes para un elemento. Esto influye en la
+manera en que los estilos son aplicados. La especificidad está basada en las reglas de
+coincidencia que están compuestas por diferentes tipos de selectores CSS.
+La especificidad sólo se aplica cuando el mismo elemento es objetivo de múltiples
+declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de
+una declaración directa, está siempre tendrá preferencia sobre las reglas heredadas
+de su ancestro.
+
+La especificidad hace referencia a la relevancia que tiene un estilo sobre un elemento
+de la página al cual le están afectando varios estilos de CSS al mismo tiempo. Es decir,
+hace referencia al grado de importancia de un estilo sobre otro.
+
+La siguiente tabla muestra los niveles de especificidad, desde los más específicos a
+los más generales:
+
+Estilo                                 Ejemplo                                           Nivel (peso)
+
+!important              cualquier-selector { color: #FF0000!important; }               1, 0, 0, 0, 0
+
+inline o directo         <p style=“color:#FF0000;”>Lorem Ipsum</p>                     0, 1, 0, 0, 0
+
+ID                             #parrafo { color: #FF0000; }                            0, 0, 1, 0, 0
+
+Clases, atributos y             .parrafo { color: #FF0000; }                           0, 0, 0, 1, 0
+pseudoclases                                            
+
+Etiquetas y                      p { color: #FF0000; }                                 0, 0, 0, 0, 1
+pseudoelementos  
+
+IMPORTANTE: Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la
+última declaración encontrada en el CSS.
 */
+
 
