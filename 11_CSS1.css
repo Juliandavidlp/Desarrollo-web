@@ -1,0 +1,143 @@
+
+/* Medidas, colores, fondos, 
+fuentes e íconos
+
+
+CSS 2 - 
+● Unidades de medida.
+● Colores CSS.
+● Fondos en CSS.
+● Fuentes y tipografías.
+● Estilos para textos y listas.
+● Íconos
+
+Unidades de medida 
+
+Las medidas en CSS se emplean para definir dimensiones y márgenes de los 
+elementos, también para establecer el tamaño de letra del texto. Se indican 
+como un valor numérico entero o decimal seguido de una unidad de medida.
+CSS divide las unidades de medida en: 
+
+● Absolutas: Son medidas fijas e indican cantidades exactas en alguna 
+unidad. Su valor real es directamente el valor indicado y se ve igual en 
+todos los dispositivos No dependen de otro valor de referencia, por eso se 
+llaman absolutas. La desventaja que tienen es que son muy poco flexibles.
+
+● Relativas: Definen su valor en relación con otra medida y para obtener su 
+valor real se debe realizar alguna operación con el valor indicado. 
+Dentro de las medidas relativas están las flexibles que son relativas al 
+tamaño de la pantalla.
+
+
+Unidades de medida absolutas 
+
+Son medidas fijas que deberían verse igual en todos los dispositivos. Tienen la 
+desventaja de ser muy poco flexibles y no adaptarse fácilmente a los diferentes 
+medios y por esto no suelen ser utilizadas. La más utilizada es el pixel (px). +info
+● px: Un pixel es el elemento más pequeño de imagen que puede mostrar una 
+pantalla y su medida real depende del dispositivo.
+
+● cm: centímetros (10 mm).
+● mm: milímetros.
+● pt: puntos. Un punto equivale a 0.35 milímetros.
+● in: pulgadas: Una pulgada equivale a 2.54 centímetros (25,4 mm).
+● pc: picas. Una pica equivale a unos 4.23 milímetros.
+
+
+Unidades de medida relativas 
+
+No están completamente definidas, su valor siempre está referenciado respecto 
+a otro valor (resolución, densidad de pantalla, etc.). Son las más utilizadas por la 
+flexibilidad con la que se adaptan a los diferentes medios y su potencia.
+
+Unidad          Significado         Medida aproximada
+
+em              <<M>>               1em = tamaño de fuente establecida en navegador.
+ex              <<x>>               (0,5 em apróx) 1ex = mitad del tamaño de la fuente.
+ch              <<zero width>>       1ch = tamaño de ancho del cero (0).
+rem             <<root M>>           1rem = tamaño fuente raíz.
+%               Porcentaje           Relativa a herencia (contenedor padre)
+
+
+La unidad em equivale a 16px, salvo que se modifique por el usuario. 
+1em equivaldría a 16px, mientras que 2em serían justo el doble: 32px. Por otro 
+lado, 0.5em equivalen justo la mitad: 8px. em es relativa al tamaño de letra.
+Si empleamos un font-size de 10px en el body, 1em equivale a 10px. Su tamaño varía 
+en función del tamaño del elemento padre. Y, por ejemplo, 1.2em sería un 20% más grande
+ que el tamaño de su elemento padre.
+
+Las unidades ex o ch, menos utilizadas. La unidad ex es aproximadamente la 
+mitad del tamaño de la fuente establecida por el navegador del usuario, por lo 
+que 1ex es igual a 0.5em. La unidad ex se basa en la altura de la x minúscula.
+Su tamaño exacto depende de la tipografía utilizada, y puede ser algo mayor a 0.5em.
+
+La unidad ch, equivale al tamaño de ancho del 0 de la fuente actual.
+
+El porcentaje (%) define una unidad en función de otra. Por ejemplo, si estamos 
+trabajando en 12px y definimos una unidad como 150% obtendremos 18px.
+
+La unidad rem (root em) toma la idea de la unidad em, pero permite establecer 
+un tamaño base personalizado (generalmente para el documento en general, 
+utilizando html o la pseudoclase :root). De esta forma, podemos trabajar con 
+múltiplos del tamaño base:
+*/
+
+:root {font-size: 22px; /* Tamaño base */}
+
+h1 {font-size: 2rem; /* El doble del tamaño base: 44px */}
+h2 {font-size: 1rem; /* El mismo tamaño base: 22px */}
+/*
+Si queremos cambiar el tamaño del texto en general, sólo tenemos que cambiar 
+el font-size de la pseudoclase :root, y el resto se modificará en consecuencia. 
+
+
+Unidades de medida flexibles
+
+Las unidades flexibles (vw y vh o vmin y vmax) son relativas al tamaño del 
+ancho o alto del viewport (ventana gráfica, región visible de la página Web en el 
+navegador, no el body).
+
+● vw: viewport width. Por ejemplo, si decimos que un div debe medir 50vw, es 
+equivalente al 50% del ancho total del viewport.
+● vh: viewport height. Por ejemplo, si definimos qué un div mide 50vh y el alto 
+del viewport es 800px, nuestro div medirá 400px.
+
+
+Colores y tipografías
+
+
+Colores
+
+La propiedad color se puede usar en cualquier elemento, aunque principalmente 
+se usa para modificar el color del texto y el del background de un elemento. 
+Existen diferentes formas de especificar el color:
+
+● Por palabra clave: red, blue, lightblue, etc.
+● Valor hexadecimal: #31078C o #FF0000. Cada par de letras simboliza el valor del RGB.
+● Valor RGB (Red, Green, Blue): rgb(250, 0, 250), rgb(0, 0, 0) es el color negro y 
+por el contrario rgb(255, 255, 255) es blanco. Valores de 0 a 255. 
+● Valor RGBA (RGB + Alpha): rgba(5, 173, 213, 1) o rgba(100%, 62.5%, 100%, 1).
+El valor Alpha tiene que estar comprendido en [0-1] y hace referencia a la 
+transparencia del elemento, siendo 1 = opaco y 0 = transparente.
+
+
+Color de fondo
+
+El fondo de un elemento, por ejemplo <div> puede ser un color o una imagen:
+
+<div style="background-color: #334466;">
+ Este div tiene un color de fondo.
+</div>
+
+<div style='background-image: url("imagenes/foto.jpg");'>
+ Este div tiene una imagen de fondo.
+</div>
+
+En el caso de utilizar una imagen, se aplican las reglas vistas a la hora de definir 
+rutas absolutas o relativas en html.
+
+*/
+
+
+
+
