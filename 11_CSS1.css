@@ -178,10 +178,84 @@ su dispositivo. Se recomienda agregar más de una fuente, separadas entre comas.
 +info: https://www.w3schools.com/cssref/pr_font_font-family.php */
 
 div {
-    font-family: 'Times New Roman', Verdana, sans-serif;
+    font-family: 'Times New Roman', 'Verdana', 'Sans-serif';
    }
 /* 
 font-weigth establece qué tan gruesos o delgados deben mostrarse los
 caracteres en el texto. +info: https://www.w3schools.com/cssref/pr_font_weight.php
+
+
+Google Fonts
+
+Si deseamos utilizar alguna fuente que no sea estándar, podemos utilizar la API 
+de Google Fonts que dispone de cientos de tipografías para utilizar en nuestra 
+página. Simplemente debemos agregar un enlace en la hoja de estilo.
+
+1. Ingresar a 
+https://fonts.google.com/
+2. Seleccionar una fuente.
+3. Copiar y pegar la regla CSS. 
+
++info: https://support.google.com/webdesigner/answer/6163074?hl=es#add-google-fonts
+
+Adobe Fonts
+Adobe Fonts es un servicio en línea que 
+brinda a sus suscriptores acceso a su 
+biblioteca de fuentes, bajo un único 
+acuerdo de licencia. Las fuentes pueden 
+usarse directamente en sitios web.
+Adobe Fonts: 
+https://fonts.adobe.com/fonts/ 
++info: https://helpx.adobe.com/ar/fonts/using/add-fonts-website.html
+
+
+Íconos (fontawesome)
+
+Hay varias formas de agregar iconos a tu sitio web, en https://fontawesome.com/, 
+hay iconos gratuitos y pagos, te registras en el sitio y te  envían un mail 
+con una etiqueta que podés agregar al <head> de tu HTML. Luego podés elegir
+los íconos a utilizar y agregar a tu página.
+
+Íconos (flaticon)
+
+Otros ìconos interesantes se pueden conseguir en https://www.flaticon.es/ . 
+Se pueden descargar o utilizar directamente vinculando las imágenes desde su web. 
+Cómo descargar íconos gratis y crear patrones en Flaticon: 
+https://www.youtube.com/watch?v=rOVQN-kmhxw&feature=youtu.be
+
+
+
+Material extra
+
+Cómo elegir una paleta de colores
+Generadores de paleta de colores:
+● https://www.colorhunt.co/
+● http://palettr.com/
+● https://color.adobe.com/es/create/color-wheel
+● https://www.adobe.com/es/express/feature/design/color-palette
+● https://htmlcolorcodes.com/es/
+● https://imagecolorpicker.com/es (utilice su imagen)
+● http://colrd.com/ (utilice su imagen)
+● https://color.adobe.com/es/create/image (utilice su imagen)
+
+●Colores en diseño web. Cómo elegir la combinación perfecta:
+ https://blog.hubspot.es/marketing/colores-para-paginas-web
+
+ Fuentes:
+● Cómo utilizar las fuentes de Google Fonts: https://youtu.be/FWpIs9eAL5s
+● Añadir fuentes a su sitio web: https://helpx.adobe.com/es/fonts/using/add-fonts-website.html
+● Reconocer fuentes: https://www.myfonts.com/pages/whatthefont
+
+Fondos en CSS: 
+● https://desarrolloweb.com/articulos/fondos-css
+
+Estilos para listas:
+● https://www.w3schools.com/css/css_list.asp
+● https://developer.mozilla.org/es/docs/Learn/CSS/Styling_text/Styling_lists
+
+
+
  */
+
+
 
