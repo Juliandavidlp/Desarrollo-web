@@ -1,4 +1,3 @@
-
 /* Medidas, colores, fondos, 
 fuentes e íconos
 
@@ -82,7 +81,7 @@ utilizando html o la pseudoclase :root). De esta forma, podemos trabajar con
 múltiplos del tamaño base:
 */
 
-:root {font-size: 22px; /* Tamaño base */}
+:root {font-size: 22px; /* Establezco un tamaño base */}
 
 h1 {font-size: 2rem; /* El doble del tamaño base: 44px */}
 h2 {font-size: 1rem; /* El mismo tamaño base: 22px */}
@@ -97,10 +96,12 @@ Las unidades flexibles (vw y vh o vmin y vmax) son relativas al tamaño del
 ancho o alto del viewport (ventana gráfica, región visible de la página Web en el 
 navegador, no el body).
 
-● vw: viewport width. Por ejemplo, si decimos que un div debe medir 50vw, es 
-equivalente al 50% del ancho total del viewport.
-● vh: viewport height. Por ejemplo, si definimos qué un div mide 50vh y el alto 
-del viewport es 800px, nuestro div medirá 400px.
+● vw: viewport width, el 1% del ancho de la ventana gráfica. Por ejemplo, si decimos que un div debe medir 50vw, es 
+equivalente al 50% del ancho total de la ventana gráfica.
+● vh: viewport height, el 1% de la altura de la ventana gráfica. Por ejemplo, si definimos que un div mide 50vh,
+ nuestro div medirá el 50% de la altura total de la ventana gráfica.
+
+Más información: https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Values_and_units
 
 
 Colores y tipografías
@@ -136,8 +137,51 @@ El fondo de un elemento, por ejemplo <div> puede ser un color o una imagen:
 En el caso de utilizar una imagen, se aplican las reglas vistas a la hora de definir 
 rutas absolutas o relativas en html.
 
-*/
+
+Tipografías
+
+Las tipografías o fuentes son uno de los pilares del diseño web. La elección de
+una tipografía adecuada, su tamaño, color, espacio entre letras, interlineado y
+otras características pueden variar mucho, de forma consciente o inconsciente,
+la percepción en la que una persona interpreta o accede a los contenidos de
+una página. +info: https://www.w3schools.com/css/css_font.asp
+
+Propiedades básicas:
+
+● font-size: tamaño de la fuente (px, em, rem).
+● font-style: estilo de fuente (normal, italic, oblique).
+● font-family: lista de fuentes (arial, helvetica, sans-serif, etc).
+● font-weight: grosor (peso) de la fuente (bold, 400, 600, 800).
+
+Propiedades font-size y font-style
+
+Recordemos que utilizamos <h1>…<h6> para los títulos y <p> para encabezados.
+Font-size (tamaño de la fuente) puede ser absoluto o relativo. El valor
+predeterminado es 16px. +info: https://www.w3schools.com/css/css_font_size.asp
+
+<p style='font-size: 16px;'>Fuente en 16px</p>
+<p style='font-size: 24px;'>Fuente en 24px</p>
+<p style='font-size: 32px;'>Fuente en 32px</p>
+
+Respecto a font-style, determina el estilo del texto. Posee tres valores posibles:
+
+<p style='font-style: normal;'>Párrafo con estilo normal.</p>
+<p style='font-style: italic;'>Párrafo con estilo cursiva.</p>
+<p style='font-style: oblique;'>Párrafo con estilo oblicuo.</p>
 
 
+Propiedades font-family y font-weight
 
+Font-family establece la familia tipográfica. Los nombres compuestos se colocan
+entre comillas. Las fuentes sólo se visualizarán si el usuario las tiene instaladas en
+su dispositivo. Se recomienda agregar más de una fuente, separadas entre comas.
++info: https://www.w3schools.com/cssref/pr_font_font-family.php */
+
+div {
+    font-family: 'Times New Roman', Verdana, sans-serif;
+   }
+/* 
+font-weigth establece qué tan gruesos o delgados deben mostrarse los
+caracteres en el texto. +info: https://www.w3schools.com/cssref/pr_font_weight.php
+ */
 
