@@ -107,7 +107,7 @@ documento HTML. Po ej.:
 */
 
 *{
-    margin: 10 px; /*margin establece el margen para los cuatro lados*/
+    margin: 10 px; /*establece el margen para los cuatro lados, si coloco el valor auto; puedo centrar el elemento al que le establece el margen*/
     padding: 5 px; /*padding establece el espacio de relleno*/
     background-color: lightgreen; /*cambia el color de relleno*/
     font-family: Verdana; /*cambia el tipo de letra*/
