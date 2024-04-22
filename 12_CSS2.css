@@ -1,9 +1,9 @@
-/* Modelo de caja y posicionamiento 
+/* Modelo de caja y posicionamiento
 
 ● Modelo de caja y propiedades.
 ● Posicionamiento y visualización.
 
-Modelo de caja
+Modelo de caja:
 
 El modelo de caja o “box model” es seguramente la característica más
 importante del lenguaje de hojas de estilos CSS, ya que condiciona el
@@ -37,4 +37,23 @@ definidos) y en el espacio ocupado por el margen se muestra el color o
 imagen de fondo de su elemento padre (si están definidos). Si ningún
 elemento padre tiene definido un color o imagen de fondo, se muestra el
 color o imagen de fondo de la propia página (si están definidos).
+
+
+Dimensiones y desbordamiento: 
+
+Dimensiones (ancho y alto)
+
+Proporcionamos tamaños específicos a los diferentes elementos de un
+documento HTML asignando valores a las propiedades width (ancho) y height
+(alto). En el caso de utilizar el valor auto en las propiedades anteriores (valor por
+defecto), el navegador se encarga de calcular el ancho o alto necesario,
+dependiendo del contenido del elemento. El tamaño automático dado a un
+elemento depende del tipo de elemento que se trate (en bloque o en línea).
+
+Si en lugar de utilizar la opción auto, o simplemente no indicamos valores
+para ancho y alto, el tamaño de la caja suele acomodarse al contenido
+sin problemas. Pero cuando asignamos valores a estos atributos,
+forzamos al elemento a tener un aspecto concreto, obteniendo
+resultados inesperados si su contenido es más grande que el tamaño que hemos definido.
+
 */
