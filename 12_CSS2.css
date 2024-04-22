@@ -1,0 +1,40 @@
+/* Modelo de caja y posicionamiento 
+
+● Modelo de caja y propiedades.
+● Posicionamiento y visualización.
+
+Modelo de caja
+
+El modelo de caja o “box model” es seguramente la característica más
+importante del lenguaje de hojas de estilos CSS, ya que condiciona el
+diseño de todas las páginas web. El Modelo de cajas es un mecanismo
+mediante el que CSS hace que todos los elementos de las páginas se
+representan mediante cajas rectangulares.
+Las cajas de una página se crean automáticamente. Cada vez que se
+inserta una etiqueta HTML, se crea una nueva caja rectangular que
+encierra los contenidos de ese elemento.
+Los navegadores crean y colocan las cajas de forma automática, pero
+CSS permite modificar todas sus características.
+
+Las cajas de las páginas no son visibles a simple vista porque 
+inicialmente no muestran ningún color de fondo ni ningún borde.
+Cada elemento incluido en el documento HTML genera una caja
+que tiene varios atributos modificables. El comportamiento de
+esa caja depende de su clasificación, es decir, si se trata
+de un elemento de línea o de bloque.
+
+La representación básica del Modelo de caja es la siguiente, donde podemos
+observar varios conceptos importantes a diferenciar:
+
+● El borde (border). Es el límite que separa el interior del exterior del elemento.
+● El margen (margin). Es la parte exterior del elemento, por fuera del borde.
+● El relleno (padding). Es la parte interior del elemento, entre el contenido y el borde.
+● El contenido (content). Es la parte interior del elemento, excluyendo el relleno.
+
+El relleno y el margen son transparentes, por lo que en el espacio
+ocupado por el relleno se muestra el color o imagen de fondo (si están
+definidos) y en el espacio ocupado por el margen se muestra el color o
+imagen de fondo de su elemento padre (si están definidos). Si ningún
+elemento padre tiene definido un color o imagen de fondo, se muestra el
+color o imagen de fondo de la propia página (si están definidos).
+*/
