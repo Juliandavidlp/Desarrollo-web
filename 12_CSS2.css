@@ -1,9 +1,9 @@
-/* Modelo de caja y posicionamiento
+/* Modelo de caja y posicionamiento 
 
 ● Modelo de caja y propiedades.
 ● Posicionamiento y visualización.
 
-Modelo de caja:
+Modelo de caja
 
 El modelo de caja o “box model” es seguramente la característica más
 importante del lenguaje de hojas de estilos CSS, ya que condiciona el
@@ -38,8 +38,7 @@ imagen de fondo de su elemento padre (si están definidos). Si ningún
 elemento padre tiene definido un color o imagen de fondo, se muestra el
 color o imagen de fondo de la propia página (si están definidos).
 
-
-Dimensiones y desbordamiento: 
+Dimensiones y desbordamiento
 
 Dimensiones (ancho y alto)
 
@@ -50,10 +49,83 @@ defecto), el navegador se encarga de calcular el ancho o alto necesario,
 dependiendo del contenido del elemento. El tamaño automático dado a un
 elemento depende del tipo de elemento que se trate (en bloque o en línea).
 
-Si en lugar de utilizar la opción auto, o simplemente no indicamos valores
-para ancho y alto, el tamaño de la caja suele acomodarse al contenido
+Si en lugar de utilizar la opción auto, simplemente no indicamos valores
+para el ancho y el alto, el tamaño de la caja suele acomodarse al contenido
 sin problemas. Pero cuando asignamos valores a estos atributos,
 forzamos al elemento a tener un aspecto concreto, obteniendo
 resultados inesperados si su contenido es más grande que el tamaño que hemos definido.
+
+min-width, max-width, min-height y max-height
+
+Una forma de mitigar el problema mencionado consiste en utilizar las propiedades
+hermanas de width: min-width y max-width; y las propiedades hermanas de height:
+min-height y max-height. Con estas propiedades, en lugar de establecer un tamaño
+fijo, establecemos límites máximos y mínimos, donde el ancho o alto de la caja queda
+comprendido entre esos valores.
+*/
+
+div{
+    width: 800px;
+    height: 800px;
+    background: red;
+    max-width: 500px;
+   }
+
+/* En este caso a pesar de estar indicando un tamaño de 800px, le
+aplicamos un max-width de 500px, por lo que estamos
+limitando el elemento a un tamaño de ancho de 500 píxeles
+como máximo y nunca superará ese tamaño. 
+   
+Las propiedades de mínimos (min-width y min-height) por defecto tienen valor 0,
+mientras que las propiedades de máximos (max-width y max-height) tienen por defecto
+valor none. 
+
+Zonas de un elemento
+
+En CSS existen ciertas palabras clave para hacer referencia a una zona u
+orientación concreta sobre un elemento. Son conceptos muy sencillos y lógicos:
+● Top: Parte superior
+● Left: Parte izquierda
+● Right: Parte derecha
+● Bottom: Parte inferior
+● Center: La posición central entre los extremos horizontales y verticales
+
+
+Desbordamiento
+
+Puede ocurrir que apliquemos un tamaño de alto y ancho a un elemento HTML,
+pero su contenido de texto sea tan grande que no quepa dentro de la caja.
+En ese caso lo que ocurre es que el contenido se desborda. Podemos modificar
+este comportamiento con la propiedad de CSS overflow o con alguna de sus
+propiedades específicas overflow-x (para el eje horizontal) u overflow-y
+(para el eje vertical).
+
+Dichas propiedades pueden tomar varios valores, donde visible es el valor que
+tiene por defecto, permitiendo el desbordamiento. Otras opciones son las
+siguientes:
+
+* El valor hidden oculta el contenido que sobresale.
+* El valor scroll, con el que se colocan barras de scroll horizontales y verticales
+* El valor auto, con el que se coloca una barra de desplazamiento necesaria.
+
+Aclaración: overflow-x y overflow-y permiten ocultar una barra de desplazamiento
+            (habitualmente la barra de desplazamiento horizontal).
+
+
+
+Márgenes y relleno      
+
+
+Márgenes (margin)
+
+Se utilizan para crear espacio alrededor de los elementos, fuera de los bordes
+definidos. Margin especifica el espacio que existe entre el borde de un
+elemento y el borde de otros elementos adyacentes. Las opciones son:
+
+● margin-top
+● margin-right
+● margin-bottom
+● margin-left
+
 
 */
