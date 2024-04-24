@@ -120,12 +120,155 @@ Márgenes (margin)
 
 Se utilizan para crear espacio alrededor de los elementos, fuera de los bordes
 definidos. Margin especifica el espacio que existe entre el borde de un
-elemento y el borde de otros elementos adyacentes. Las opciones son:
+elemento y el borde de otros elementos adyacentes. Las propiedades son:
 
 ● margin-top
 ● margin-right
 ● margin-bottom
 ● margin-left
 
+Se puede aplicar en conjunto o de forma concreta a cada una de las zonas del 
+elemento. Podemos aplicar diferentes márgenes a cada zona de un elemento utilizando 
+cada una de estas propiedades, o dejando al navegador que lo haga de forma 
+automática indicando el valor auto.
 
+Para centrar un elemento podemos aplicar un ancho fijo al contenedor. Por ejemplo: width: 
+500px con margin: auto. El navegador, al conocer su tamaño, se encarga de repartirlo 
+equitativamente entre los márgenes, dado que conoce el resto del tamaño de la ventana.
+
+Nota: Si nos encontramos con un solapamiento de márgenes. Por defecto, si  tenemos dos elementos
+adyacentes con, por ejemplo, margin: 20px cada uno, ese espacio de  margen se solapará 
+y tendremos 20px en total, y no 40px (la suma de cada uno) como  podríamos pensar en un principio.
+
+Relleno (padding)
+
+Los rellenos (padding) son los espacios que hay entre los bordes del elemento 
+en cuestión y el contenido (por la  parte interior).
+Las opciones son:
+
+● padding-top: 0
+● padding-right: 0
+● padding-bottom: 0
+● padding-left: 0
+
+Al igual que con los márgenes, los rellenos tienen varias propiedades para indicar 
+cada zona. Como se puede ver en la tabla, por defecto no hay relleno (el relleno está en cero), 
+aunque este puede modificarse tanto con las propiedades anteriores como la 
+propiedad de atajo en el modelo de la caja.
+
+CSS proporciona atajos para los márgenes y los rellenos:
+
+                    10px; top/right/bottom/left
+
+                    top/bottom             right/left               
+margin o            10px                    20px;                    
+padding
+                    top/bottom             right/left              bottom
+                    10px                    20px;                  10px;
+
+                    top                     right                  bottom          left       
+                    10 px                    20px                  10px;           20px;
+                    
+
+Bordes
+
+Borde (border)
+
+Establece un límite entre la parte interior y la parte exterior de la caja. Se 
+pueden especificar ancho, estilo y color. Las opciones son:
+
+● border-top
+● border-right
+● border-bottom
+● border-left
+
+Las propiedades básicas y específicas de los bordes en CSS son las siguientes:
+
+● border-color: black|color
+● border-width:thin|medium|thick|size
+● border-style:none|style
+
+El estilo de borde más frecuente es solid (borde liso y continuo), y que además es la 
+opción por defecto. Pueden utilizarse cualquiera de los estilos indicados en la tabla 
+anterior e incluso combinarlos con otras propiedades.
+
+● hidden: Oculto. Idéntico a none, salvo para conflictos con tablas.
+● dotted: Borde basado en puntos.
+● dashed: Borde basado en rayas (línea discontinua).
+● solid: Borde sólido (línea continua).
+● double: Borde doble (dos líneas continuas).
+● groove: Borde biselado con luz desde arriba.
+● ridge: Borde biselado con luz desde abajo. Opuesto a groove.
+● inset: Borde con profundidad «hacia dentro».
+● outset: Borde con profundidad «hacia fuera». Opuesto a inset
+
+¿Cómo estilar bordes redondeados?:
+https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+
+
+Bordes múltiples
+
+Sólo hemos utilizado un parámetro en cada propiedad, aplicando el mismo valor 
+a cada borde de un elemento. Sin embargo, podemos especificar de uno a cuatro parámetros,
+dependiendo de lo que queramos hacer:
+
+Propiedad           Valor                               Significado
+
+border-color        color                           1 parámetro. Aplica el mismo color a todos los bordes.
+                    color color                     2 parámetros. Aplica al borde top/bottom , y al left/rigth.
+                    color   color   color           3 parámetros. Aplica al top, al left/right y al bottom.
+                    color color color color         4 parámetros. Aplica al top, al right, bottom y left
+
+Podemos hacer lo mismo con las propiedades border-width y border-style. 
+Teniendo en cuenta esto, disponemos de una gran flexibilidad a la hora de especificar
+esquemas de bordes más complejos. Por ej.:                                              
 */
+
+div {
+    border-color: red blue green;
+    border-width: 2px 10px 5px;
+    border-style: solid double solid;
+   }
+
+/* 
+En el ejemplo utilizamos 3 parámetros, indicando un elemento con borde superior rojo 
+sólido de 2 píxeles de grosor, con borde izquierdo y derecho doble azul de 10 píxeles de 
+grosor y con un borde inferior verde sólido de 5 píxeles de grosor.
+
+Con la propiedad border-width pasa exactamente lo mismo que con margin y padding, 
+actuando en este caso en relación al grosor del borde de un elemento. Se pueden utilizar 
+de 1 a 4 parámetros.
+
+Bordes - Atajos
+
+Con tantas propiedades, incluso para hacer algo sencillo necesitamos varias 
+líneas de código. Pero podemos utilizar la propiedad de atajo border, con la que 
+podemos hacer una síntesis sin necesidad de indicar múltiples propiedades 
+individuales por separado, realizando el proceso de manera simplificada:
+
+                border: size style color;
+*/
+
+ div {
+    border: 1px solid #000000;
+ }   
+
+ /* Bordes especificos 
+
+Una forma más intuitiva, es utilizar las propiedades de bordes específicos (por zonas) y 
+aplicar estilos combinándolos junto a la herencia de CSS. Para utilizarlas bastaría con 
+indicar la zona justo después de border-. Por ejemplo:
+ */
+
+div {
+    border-bottom-width: 2px;
+    border-bottom-style: dotted;
+    border-bottom-color: black;
+} 
+
+div {
+    border: 5px solid red;
+    border-top-width: 15px;
+    border-top-color: orange;
+}
+       
