@@ -272,7 +272,9 @@ div {
     border-top-color: orange;
 }
        
-/* De manera simplificada: */
+/* De manera simplificada: 
+
+            border-top/right/bottom/left: size style color;*/
 div{
     border: 5px solid blueviolet;
     border-top: 15px orange;
