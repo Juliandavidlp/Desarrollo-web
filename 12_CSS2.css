@@ -272,3 +272,31 @@ div {
     border-top-color: orange;
 }
        
+/* De manera simplificada: */
+div{
+    border: 5px solid blueviolet;
+    border-top: 15px orange;
+}
+
+
+/* 
+                                Box-sizing
+
+En el modelo de caja CSS 'clásico', el borde y los márgenes internos y externos se 
+añaden al tamaño del elemento definido con las propiedades width y height, 
+motivo por el que para revertir este comportamiento necesitamos de la 
+propiedad box-sizing,que indica cómo calcular el ancho y el alto total 
+de un elemento y acepta los valores siguientes:
+
+    ● box-sizing: content-box: Es el valor que cualquier caja tiene asignada por 
+        defecto. Las propiedades width y height no incluyen el borde, el padding o el margin.
+
+    ● box-sizing: border-box: Las propiedades width y height incluyen el contenido, 
+                    padding y borde pero no el margin.
+
+    ● box-sizing: initial: Reestablece esta propiedad a su valor por defecto 
+
+    ● box-sizing: inherit: Hereda esta propiedad de su elemento padre.
+
+
+*/
