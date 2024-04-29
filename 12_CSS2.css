@@ -300,5 +300,90 @@ de un elemento y acepta los valores siguientes:
 
     ● box-sizing: inherit: Hereda esta propiedad de su elemento padre.
 
+La propiedad box-sizing, permite modificar este comportamiento y hacer que el borde
+y el relleno estén incluídos en el interior del tamaño definido con las propiedades
+width y height. En este caso se reducirá el espacio disponible para el contenido.
+
+Posicionamiento
+
+Los elementos en línea y en bloque nos permiten diseñar esquemas complejos, 
+alineando y combinando elementos. El posicionamiento por defecto es el estático (static):
+todos los elementos aparecen con un orden natural según donde estén colocados en el HTML.
+No obstante, CSS permite al diseñador modificar la posición en la que se 
+muestra cada caja. Además, existen otros modos alternativos de posicionamiento, que podemos
+cambiar mediante la propiedad position, que nos permiten modificar la posición de los 
+elementos y su contenido. Utilizando las propiedades que proporciona CSS para alterar 
+la posición de las cajas es posible realizar efectos muy avanzados y diseñar estructuras
+de páginas que de otra forma no serían posibles.
+
+La propiedad position de CSS especifica cómo un elemento es posicionado en el documento. 
+Las propiedades top, right, bottom, y left determinan la ubicación final de los elementos.
+A esta propiedad se le pueden indicar los valores siguientes:
+
+● static: es el valor por defecto, un elemento con este valor no está posicionado con CSS.
+El elemento se renderiza de acuerdo al flujo normal del documento. 
+
+● relative: El elemento es posicionado de acuerdo al flujo normal del documento, y luego
+es desplazado con relación a sí mismo, con base en los valores de top, right, bottom, and left.
+
+● absolute: hace que un elemento se ubique considerando su contenedor posicionado más 
+cercano. Si no encuentra ningún contenedor padre posicionado cercano, el elemento se colocará 
+respecto a la ventana gráfica. El resto de  los elementos de la página ignoran la nueva posición 
+del elemento, entonces el elemento es removido del flujo normal del documento, sin crearse espacio
+alguno para el elemento en el esquema de la página. 
+
+Al utilizar esta propiedad, los márgenes del elemento se comportan de manera diferente 
+a como lo hacen en los elementos con posicionamiento estático o relativo. No colapsan: 
+A diferencia de los elementos con posicionamiento estático o relativo,
+donde los márgenes adyacentes pueden colapsarse en un único margen más grande, 
+los márgenes de los elementos absolutamente posicionados se mantienen independientes.
+Esto significa que el espacio alrededor del elemento se conserva tal como se define en las reglas CSS.
+
+● fixed: El posicionamiento fijo es hermano del posicionamiento absoluto. Funciona igual, salvo que
+hace que el elemento se muestre en una posición fija dependiendo de la región visual del navegador.
+En este caso, la caja está posicionada con respecto a la ventana del navegador y se mantiene en el 
+mismo lugar incluso al hacer scroll en la página. 
+
+● sticky: al realizar un scroll y después de alcanzar una posición de desplazamiento 
+determinada, se 'pega' al borde elegido. El posicionamiento sticky puede considerarse un híbrido 
+de los posicionamientos relativo y fijo. Un elemento con posicionamiento sticky es tratado 
+como un elemento posicionado relativamente hasta que cruza un umbral especificado, en cuyo punto
+se trata como fijo hasta que alcanza el límite de su padre. Por ejemplo...*/
+
+#one {
+    position: sticky;
+    top: 10px;
+  }
+
+ /*...posicionaría el elemento con id uno relativamente hasta que el viewport sea desplazado 
+ de manera tal que el elemento esté a menos de 10 píxeles del límite superior. Más allá de ese umbral,
+el elemento sería fijado a 10 píxeles del límite superior. 
+
+Un uso común para el posicionamiento sticky es para los encabezados en una lista alfabética.
+El encabezado "B" aparecerá justo por debajo de los ítems que comienzan con "A" hasta que se hayan 
+desplazado más allá de la pantalla. En vez de deslizarse fuera de la pantalla como el resto del contenido,
+el encabezado "B" se mantendrá fijado al límite superior del viewport hasta que todos los ítems "B" 
+se hayan desplazado fuera de la pantalla, en cuyo punto será cubierto por el encabezado "C",
+y así sucesivamente. Se debe especificar un umbral con al menos uno de top, right, bottom, or left 
+para que el posicionamiento sticky se comporte de forma esperada. Caso contrario, 
+será indistinguible del posicionamiento relativo.
+
+#Consideraciones de accesibilidad
+
+Asegurarse de que los elementos posicionados con valor absolute o fixed no oscurezcan
+el resto del contenido cuando la página sea ampliada para aumentar el tamaño del texto.
+
+Performance y accesibilidad
+
+Los elementos que se desplazan que contienen contenido fixed o sticky content pueden ocasionar
+problemas de performance y accesibilidad. Mientras un usuario desplaza la página, el navegador 
+debe realizar repaint del contenido sticky o fijo en una nueva locación. Dependiendo del contenido
+que precisa ser repainted, la performance del navegador y la velocidad de procesamiento del dispositivo,
+el navegador podría no ser capaz de realizar el repaint a 60 fps, ocasionando problemas de accesibilidad
+para personas con sensibilidades y desprolijidad para todos. Una solución es agregar will-change: 
+transform (en-US) a los elementos posicionados para renderizar el elemento en su propia capa,
+mejorando la velocidad del repaint y por lo tanto mejorando performance y accesibilidad.
+
+Más info: https://developer.mozilla.org/es/docs/Web/CSS/position
 
 */
