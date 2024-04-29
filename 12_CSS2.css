@@ -53,7 +53,7 @@ Si en lugar de utilizar la opción auto, simplemente no indicamos valores
 para el ancho y el alto, el tamaño de la caja suele acomodarse al contenido
 sin problemas. Pero cuando asignamos valores a estos atributos,
 forzamos al elemento a tener un aspecto concreto, obteniendo
-resultados inesperados si su contenido es más grande que el tamaño que hemos definido.
+resultados inesperados si su contenido es más grande que el tamaño de la caja.
 
 min-width, max-width, min-height y max-height
 
@@ -79,6 +79,7 @@ como máximo y nunca superará ese tamaño.
 Las propiedades de mínimos (min-width y min-height) por defecto tienen valor 0,
 mientras que las propiedades de máximos (max-width y max-height) tienen por defecto
 valor none. 
+
 
 Zonas de un elemento
 
@@ -112,9 +113,7 @@ Aclaración: overflow-x y overflow-y permiten ocultar una barra de desplazamient
             (habitualmente la barra de desplazamiento horizontal).
 
 
-
 Márgenes y relleno      
-
 
 Márgenes (margin)
 
@@ -163,7 +162,7 @@ CSS proporciona atajos para los márgenes y los rellenos:
                     top/bottom             right/left               
 margin o            10px                    20px;                    
 padding
-                    top/bottom             right/left              bottom
+                    top                    left/right              bottom
                     10px                    20px;                  10px;
 
                     top                     right                  bottom          left       
@@ -214,10 +213,10 @@ dependiendo de lo que queramos hacer:
 
 Propiedad           Valor                               Significado
 
-border-color        color                           1 parámetro. Aplica el mismo color a todos los bordes.
-                    color color                     2 parámetros. Aplica al borde top/bottom , y al left/rigth.
-                    color   color   color           3 parámetros. Aplica al top, al left/right y al bottom.
-                    color color color color         4 parámetros. Aplica al top, al right, bottom y left
+border-color       color                     1 parámetro. Aplica el mismo color a todos los bordes.
+                   color color               2 parámetros. Aplica al borde top/bottom , y al left/rigth.
+                   color   color   color     3 parámetros. Aplica al top, al left/right y al bottom.
+                   color color color color   4 parámetros. Aplica al top, al right, bottom y left
 
 Podemos hacer lo mismo con las propiedades border-width y border-style. 
 Teniendo en cuenta esto, disponemos de una gran flexibilidad a la hora de especificar
@@ -268,16 +267,18 @@ div {
 
 div {
     border: 5px solid red;
-    border-top-width: 15px;
+    border-top-width: 15px; 
     border-top-color: orange;
-}
-       
-/* De manera específica y simplificada: 
 
-                border-top/right/bottom/left: size style color;*/
+}
+
+/* De manera simplificada: 
+
+            border-top/right/bottom/left: size style color; */
 div{
     border: 5px solid blueviolet;
     border-top: 15px orange;
+ 
 }
 
 
@@ -286,19 +287,16 @@ div{
 
 En el modelo de caja CSS 'clásico', el borde y los márgenes internos y externos se 
 añaden al tamaño del elemento definido con las propiedades width y height, 
-motivo por el que para revertir este comportamiento necesitamos de la 
-propiedad box-sizing,que indica cómo calcular el ancho y el alto total 
+motivo por el que necesitamos revertir este comportamientode por medio de la 
+propiedad box-sizing, que indica cómo calcular el ancho y el alto total 
 de un elemento y acepta los valores siguientes:
 
-    ● box-sizing: content-box: Es el valor que cualquier caja tiene asignada por 
-        defecto. Las propiedades width y height no incluyen el borde, el padding o el margin.
-
-    ● box-sizing: border-box: Las propiedades width y height incluyen el contenido, 
+● box-sizing: content-box: Es el valor que cualquier caja tiene asignada por 
+    defecto. Las propiedades width y height no incluyen el borde, el padding o el margin.
+● box-sizing: border-box: Las propiedades width y height incluyen el contenido, 
                     padding y borde pero no el margin.
-
-    ● box-sizing: initial: Reestablece esta propiedad a su valor por defecto 
-
-    ● box-sizing: inherit: Hereda esta propiedad de su elemento padre.
+● box-sizing: initial: Reestablece esta propiedad a su valor por defecto 
+● box-sizing: inherit: Hereda esta propiedad de su elemento padre.
 
 La propiedad box-sizing, permite modificar este comportamiento y hacer que el borde
 y el relleno estén incluídos en el interior del tamaño definido con las propiedades
@@ -316,7 +314,13 @@ elementos y su contenido. Utilizando las propiedades que proporciona CSS para al
 la posición de las cajas es posible realizar efectos muy avanzados y diseñar estructuras
 de páginas que de otra forma no serían posibles.
 
-La propiedad position de CSS especifica cómo un elemento es posicionado en el documento. 
+Si utilizamos un modo de posicionamiento diferente al estático (absolute, fixed, sticky o relative),
+podemos emplear una serie de propiedades para modificar la posición de un elemento. En este sentido, 
+las propiedades top, bottom, left y right sirven para mover un elemento desde la orientación que
+su propio nombre indica al otro extremo. Esto es, si utilizamos left e indicamos 20px,
+estaremos indicando mover desde la izquierda 20 píxeles hacia la derecha.
+
+Entonces a la propiedad position de CSS especifica cómo un elemento es posicionado en el documento. 
 Las propiedades top, right, bottom, y left determinan la ubicación final de los elementos.
 A esta propiedad se le pueden indicar los valores siguientes:
 
@@ -324,7 +328,19 @@ A esta propiedad se le pueden indicar los valores siguientes:
 El elemento se renderiza de acuerdo al flujo normal del documento. 
 
 ● relative: El elemento es posicionado de acuerdo al flujo normal del documento, y luego
-es desplazado con relación a sí mismo, con base en los valores de top, right, bottom, and left.
+es desplazado respecto a sí mismo, a partir de las propiedades top, right, bottom, and left
+variamos la posición del elemento. Por ejemplo:*/
+
+.contenedor {
+    position: relative;
+    left: 30px;
+    top: 10px;
+    border: 2px solid blue;
+    background-color: lightblue;
+    width: 300px;
+    height: 100px;
+   }
+/*
 
 ● absolute: hace que un elemento se ubique considerando su contenedor posicionado más 
 cercano. Si no encuentra ningún contenedor padre posicionado cercano, el elemento se colocará 
@@ -342,7 +358,7 @@ Esto significa que el espacio alrededor del elemento se conserva tal como se def
 ● fixed: El posicionamiento fijo es hermano del posicionamiento absoluto. Funciona igual, salvo que
 hace que el elemento se muestre en una posición fija dependiendo de la región visual del navegador.
 En este caso, la caja está posicionada con respecto a la ventana del navegador y se mantiene en el 
-mismo lugar incluso al hacer scroll en la página. 
+mismo lugar en la página, aunque el usuario haga scroll y se desplace hacia abajo.
 
 ● sticky: al realizar un scroll y después de alcanzar una posición de desplazamiento 
 determinada, se 'pega' al borde elegido. El posicionamiento sticky puede considerarse un híbrido 
@@ -385,5 +401,4 @@ transform (en-US) a los elementos posicionados para renderizar el elemento en su
 mejorando la velocidad del repaint y por lo tanto mejorando performance y accesibilidad.
 
 Más info: https://developer.mozilla.org/es/docs/Web/CSS/position
-
 */
