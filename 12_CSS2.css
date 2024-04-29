@@ -401,4 +401,101 @@ transform (en-US) a los elementos posicionados para renderizar el elemento en su
 mejorando la velocidad del repaint y por lo tanto mejorando performance y accesibilidad.
 
 Más info: https://developer.mozilla.org/es/docs/Web/CSS/position
+
+Profundidad (z-index)
+
+Establece el nivel de profundidad de un elemento sobre los demás. De esta forma, podremos
+superponer los elementos, quedando 'apilados'. Los elementos se posicionan de acuerdo al nivel
+de profundidad, quedando 'encima' los que poseen un valor de index mayor. 
+*/
+
+.box{
+    position: absolute;
+    width:100px;
+    height:140px;
+    border: 2px solid black;
+    opacity: 90%;
+   }
+
+   .z1 {
+        background-color: lightcoral;
+        left: 0px;
+        top: 0px;
+        z-index: 20;
+   }
+
+    .z2 {
+        background-color: lightblue;
+        left: 30px;
+        top: 30px;
+        z-index: 10;
+    }
+
+    .z3 {
+        background-color: lightgreen;
+        left: 60px;
+        top: 60px;
+        z-index: 0;
+    }   
+
+/*
+
+Propiedad visibility y display
+
+La propiedad de visibilidad especifica si un elemento es visible o no. Con esta propiedad, 
+puedo ocultar y eliminar un elemento del diseño del documento, aunque los elementos ocultos
+ocupan espacio en la página.
+
+visibility: visible|hidden|collapse|initial|inherit;
+
+Cada etiqueta HTML tiene un tipo de representación visual en un navegador, lo 
+que habitualmente se suele denominar el tipo de caja. En principio, se parte de 
+dos tipos básicos: inline y block. Entonces, la propiedad display, por su parte, especifica
+el comportamiento de visualización de un elemento. Por ejemplo, especifica si un elemento 
+debe ser tratado como un elemento en bloque o en línea.
+
+display: value;
+
+Cada elemento tiene un valor de display por defecto. Recordemos que los 
+navegadores le dan a los elementos valores por defecto block e inline:
+
+● block: el elemento empieza en una nueva línea (div, h1-h6, header, etc)
+● inline: puede contener algo de texto dentro de un párrafo sin interrumpir el 
+flujo del párrafo. 
+● none: es utilizado para ocultar elementos sin eliminarlos, no deja un espacio 
+donde el elemento se encontraba, como si no existiera.
+● inline-block: Los elementos inline-block fluyen con el texto y demás 
+elementos como si fueran elementos en línea y además respetan el ancho, el 
+alto y los márgenes verticales. Entonces el elemento genera una caja de elemento 
+de bloque que fluye con el contenido circundante como si fuera una caja en línea 
+(comportándose como un elemento reemplazado).
+
+La tabla siguiente muestra una lista de los valores de la propiedad:
+
+block ~ Se apila en vertical. Ocupa todo el ancho disponible de su etiqueta contenedora.
+inline ~ Se coloca en horizontal. Se adapta al ancho de su contenido. Ignora width y height.
+inline-block ~ Una combinación de las dos anteriores. Se comporta como inline pero no ignora width y height.
+
+flex ~ Utiliza el modelo de cajas adaptables de Flexbox. Muy bueno para diseños adaptables.
+inline-flex ~ La versión en línea (ocupa solo su contenido) del modelo de cajas flexibles de Flexbox.
+grid ~ Utiliza cuadrículas o rejillas con el modelo de cajas Grid CSS.
+inline-grid ~ La versión en línea (ocupa solo su contenido) del modelo de cajas Grid CSS.
+
+list-item ~ Actúa como un ítem de una lista. Es el comportamiento de etiquetas como <li>.
+table ~ Actúa como una tabla. Es el comportamiento de etiquetas como <table>.
+table-cell ~ Actúa como la celda de una tabla. Es el comportamiento de <th> o <td>.
+table-row ~ Actúa como la fila de una tabla. Es el comportamiento de <tr>
+
+Ocultar elementos
+
+Utilizar visibility: hidden es muy interesante si queremos que un elemento y su 
+contenido se vuelva invisible, pero siga ocupando su espacio y así evitar que los 
+elementos adyacentes se desplacen, lo que suele ser un comportamiento no 
+deseado en algunas ocasiones cuando se aplica display: none.
+
+Otra opción interesante es utilizar la propiedad opacity junto a transiciones o 
+animaciones, desplazarse desde el valor 0 al 1 o viceversa. De esta forma 
+conseguimos una animación de aparición o desvanecimiento.
+
+ +info: https://lenguajecss.com/css/maquetacion-y-colocacion/propiedad-display/
 */
