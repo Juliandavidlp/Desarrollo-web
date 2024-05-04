@@ -1,0 +1,88 @@
+/* Selectores avanzados y Animaciones 
+
+● Selectores avanzados.
+● Animaciones con CSS.
+● Incorporación de transformaciones y transiciones a elementos.
+● Introducción Responsive Web Design
+
+Selectores avanzados
+
+Utilizan combinadores, signos gráficos que establecen la relación entre los elementos y
+permiten hacer una selección específica:
+
+
+Agrupado (, -coma)
+Se utiliza cuando varios elementos comparten una serie de declaraciones iguales, se aplican 
+las reglas Css a los selectores involucrados. Por ejemplo:
+
+p, a, div {
+    Reglas Css
+    }
+
+Descendiente (espacio)
+Apunta a elementos contenidos dentro de otro en la estructura del documento, sin importar
+la profundidad o  los descendientes interpuestos entre ellos. Por ejemplo:
+
+div p {
+    Reglas Css
+    }
+
+Hijos directos > (mayor)
+Selecciona los elementos que sean hijos directos del contenedor padre, descartando nietos y sucesivos.
+
+span > a {
+    Reglas Css
+    }
+
+Hermano adyacente + (signo más)
+Aplica estilos a elementos que siguen inmediatamente a otros. Deben tener el mismo elemento padre ser 
+inmediatamente siguiente a él. Por ejemplo:
+
+div + p {
+    Reglas Css
+    }
+
+General de hermanos ~ (tilde de la ñ)
+Selecciona los elementos hermanos del especificado, sin necesidad de que sean adyacentes. 
+Por ej.:
+
+div ~ p {
+    Reglas Css
+    }
+
+
+    Pseudoclases
+
+Una pseudoclase es un selector que marca los elementos que están en un estado específico o tienen
+un comportamiento determinado. Todas las pseudoclases se denominan mediante una palabra precedida 
+por dos puntos y se comportan del mismo modo. Afectan un fragmento del documento que está 
+en un estado determinado y se comportan como si se hubiera añadido una clase a su HTML.
+
+:first-child
+
+Esta pseudoclase modifica el estilo del primer elemento de un grupo de elementos hermanos 
+dentro de un contenedor, es decir “el primer hijo de su padre”. Por ejemplo:
+
+A partir de:
+                <div>
+                    <p> Párrafo 1 </p>
+                    <p> Párrafo 2 </p>
+                    <p> Párrafo 3 </p>
+                </div>
+
+p:first-child {
+    color: red;
+    }
+
+:last-child
+
+Se utiliza para representar al último elemento entre un grupo de elementos hermanos 
+dentro de un contenedor, es decir “el último hijo de su padre”. Entonces,
+dado el mismo contenedor de ejemplo:
+
+p:last-child {
+    color: blue;
+    }
+
+
+*/
