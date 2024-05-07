@@ -130,7 +130,39 @@ li:nth-child(even) {background: lightcoral;}
 /*Impares*/
 li:nth-child(odd) {background: lightgreen;}
 
-/*
+
+/*Elementos del mismo tipo
+
+En los casos anteriores, seleccionamos elementos independientemente de que elemento sea. 
+Simplemente, hacemos caso a la posición donde está ubicado. Si queremos hacer referencia
+sólo a elementos del mismo tipo, utilizaremos los selectores siguientes, 
+análogosa los anteriores, pero haciendo referencia sólo a 
+elementos del mismo tipo:
+
+:first-of-type Primer elemento hijo (de su mismo tipo).
+:last-of-type Último elemento hijo (de su mismo tipo).
+:nth-of-type(n) N-elemento hijo (de su mismo tipo).
+:nth-last-oftype(n) N-elemento hijo (de su mismo tipo) partiendo desde el final.
+
+Hijos únicos
+
+Existen también varias pseudoclases para la gestión de hijos únicos. Son las siguientes:
+
+:only-child Elemento que es hijo único (de cualquier tipo).
+:only-of-type Elemento que es hijo único (de su mismo tipo).
+:empty Elemento vacío (sin hijos, ni texto).
+
+La propiedad :only-child nos proporciona un método para aplicar estilo a aquellos
+elementos que sean el único hijo de su elemento padre. Además, como ha ocurrido
+anteriormente, también existe la pseudoclase :only-of-type que es equivalente al
+anteriorpero sólo para elementos del mismo tipo, es decir, que puede ser que no sea el
+único elemento hijo, pero sí el único de su tipo.
+
+Muy relacionada está también la pseudoclase :empty, que permite seleccionar los
+elementos que estén vacíos. Ojo con esto, ya que un elemento que contenga comentarios
+HTML <!> la pseudoclase :empty lo detectará como vacío, pero si contiene espacios en
+blanco, no.
+
 Pseudoclases para hipervínculos
 
 Se aplican a etiquetas <a>, pero se pueden usar en otros elementos,
