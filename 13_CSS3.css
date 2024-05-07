@@ -78,7 +78,7 @@ p:first-child {
 
 Se utiliza para representar al último elemento entre un grupo de elementos hermanos 
 dentro de un contenedor, es decir “el último hijo de su padre”. Entonces,
-dado el mismo contenedor de ejemplo:
+dado el mismo contenedor, por ejemplo:
 
 p:last-child {
     color: blue;
