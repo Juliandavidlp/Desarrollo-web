@@ -119,3 +119,55 @@ li:nth-child(2n) {
      background: lightgreen;
 }
 
+/* Más ejemplos: */
+li:nth-child(3n+4) {
+    background:lightcoral;
+    }
+
+/*Pares*/
+li:nth-child(even) {background: lightcoral;}
+
+/*Impares*/
+li:nth-child(odd) {background: lightgreen;}
+
+/*
+Pseudoclases para hipervínculos
+
+Se aplican a etiquetas <a>, pero se pueden usar en otros elementos,
+pueden tener cuatro estados: 
+
+• :link se refiere a un enlace que todavía no ha sido visitado.
+• :visited se refiere a un enlace que fue visitado.
+• :hover se refiere a un elemento sobre el que se coloca el puntero del mouse.
+• :active se refiere a cualquier elemento que fue activado por el usuario.
+
+Pseudoclases de interacción
+
+Existen pseudoclases orientadas principalmente a los campos de formulario de
+páginas webs y la interacción del usuario con ellos, veamos otro par interesante:
+
+• :focus Aplica estilos cuando el elemento tiene el foco.
+• :checked Aplica estilos cuando la casilla está seleccionada.
+
+Por ejemplo:
+input:checked + span {
+    color: green;
+    }
+
+El ejemplo añade el selector hermano + para darle formato al <span> que contiene el texto 
+y se encuentra colocado a continuación de la casilla <input>. De esta forma, los textos
+que hayan sido seleccionados, se mostrarán en verde.
+
+Nota: Para más información chequear el archivo pdf, hay pseudoclases de validación y activación
+muy útiles para estilar formularios.
+
+Pseudoclases de negación
+
+Existe una pseudoclase muy útil, denominada pseudoclase de negación. Permite seleccionar todos 
+los elementos que no cumplan los selectores indicados entre paréntesis. Por ejemplo:*/
+
+p:not(.general) {
+    border: 1px solid #DDD; padding: 8px;
+    background: #FFF;
+    }
+
