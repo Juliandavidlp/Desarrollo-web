@@ -97,6 +97,7 @@ p:nth-child(2) {
 Más info: https://www.w3schools.com/cssref/tryit.php?filename=trycss3_last-child
 En el ejemplo siguiente, vemos como de la lista se seleccionan primero los
 elementos 3, 6 y 9, y luego los que son pares:
+*/
 
 <ol>
  <li> Item 1</li>
@@ -110,11 +111,11 @@ elementos 3, 6 y 9, y luego los que son pares:
  <li> Item 9</li>
 </ol>
 
-li:nth-child(3n) {
+li:nth-child(3n) { 
      background: lightskyblue;
     }
 
 li:nth-child(2n) {
      background: lightgreen;
 }
-*/
+
