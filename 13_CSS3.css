@@ -35,8 +35,8 @@ span > a {
     }
 
 Hermano adyacente + (signo más)
-Aplica estilos a elementos que siguen inmediatamente a otros. Deben tener el mismo elemento padre ser 
-inmediatamente siguiente a él. Por ejemplo:
+Aplica estilos a elementos que siguen inmediatamente a otros. Deben tener el mismo elemento padre y ser 
+adyacentes. Por ejemplo:
 
 div + p {
     Reglas Css
