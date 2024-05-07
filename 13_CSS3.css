@@ -173,7 +173,15 @@ pueden tener cuatro estados:
 • :hover se refiere a un elemento sobre el que se coloca el puntero del mouse.
 • :active se refiere a cualquier elemento que fue activado por el usuario.
 
-Pseudoclases de interacción
+Por ejemplo:*/
+<a href="https://google.com" target="_blank">Ir a Google</a>
+
+a:link {color: red;}
+a:hover {background-color: yellow;}
+a:visited {color: blue;}
+a:active {background-color: green; color: white;}
+
+/*Pseudoclases de interacción
 
 Existen pseudoclases orientadas principalmente a los campos de formulario de
 páginas webs y la interacción del usuario con ellos, veamos otro par interesante:
