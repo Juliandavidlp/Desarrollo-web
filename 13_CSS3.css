@@ -84,5 +84,37 @@ p:last-child {
     color: blue;
     }
 
+:nth-child(n)
 
+El selector coincide con cada elemento que es el n-ésimo hijo, independientemente del tipo
+y de su padre. N puede ser un número, una palabra clave o una fórmula. Dado el mismo contenedor,
+por ejemplo:
+
+p:nth-child(2) {
+ background: cyan;
+    }
+
+Más info: https://www.w3schools.com/cssref/tryit.php?filename=trycss3_last-child
+En el ejemplo siguiente, vemos como de la lista se seleccionan primero los
+elementos 3, 6 y 9, y luego los que son pares:
+
+<ol>
+ <li> Item 1</li>
+ <li> Item 2</li>
+ <li> Item 3</li>
+ <li> Item 4</li>
+ <li> Item 5</li>
+ <li> Item 6</li>
+ <li> Item 7</li>
+ <li> Item 8</li>
+ <li> Item 9</li>
+</ol>
+
+li:nth-child(3n) {
+     background: lightskyblue;
+    }
+
+li:nth-child(2n) {
+     background: lightgreen;
+}
 */
