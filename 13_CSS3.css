@@ -211,3 +211,35 @@ p:not(.general) {
     background: #FFF;
     }
 
+
+/*Pseudoelementos
+
+Los pseudoelementos se añaden a los selectores, pero no describen un estado especial 
+sino que permiten añadir estilos a una parte concreta del documento. Se utilizan para 
+darle estilos a partes específicas de un elemento. Están precedidos por cuatro puntos (: :).
+Dado <p>Párrafo con la primera letra de otro color</p>, por ejemplo:
+
+    ::first-letter se utiliza para darle estilo a la primera letra de un texto.
+    p::first-letter{color:blue;}
+
+    ::first-line se utiliza para darle estilo a la primera línea de un párrafo:
+    p::first-line{background-color: lightgreen;}
+
+    ::selection agrega estilos a una parte del documento que ha sido resaltada 
+    por el usuario:
+    p::selection{
+        background-color: lightsalmon;
+    }
+
+    ::before y ::after agregan contenido antes y después, respectivamente,
+    del contenido, llevan la propiedad content:
+
+    p::before{
+        content: "⭐⭐⭐"
+    }
+
+    p::after{
+        content: "🇦🇷"
+    }
+
+*/
