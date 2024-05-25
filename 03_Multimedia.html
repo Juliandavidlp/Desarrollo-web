@@ -75,11 +75,22 @@
 
     <h2>Iframe</h2>
     <p>Se utiliza para incrustar otro documento HTML que se va a cargar en forma independiente en la página actual. Podemos agregar:
-        contenidos de terceros,<br> interfaces de usuario, videos de YouTube, mapas de Google Maps o banners de publicidad desde otro sitio.</p>
+        contenidos de terceros,<br> interfaces de usuario, videos de YouTube, mapas de Google Maps o banners de publicidad desde otro sitio.
+        
+        HTML5 define un tipo de medio aislado que especifica un conjunto adicional de restricciones de contenido y se puede utilizar para alojar
+        contenido que no sea de confianza. Este contexto de navegación aislado puede configurarse a nivel de página o especificarse como un atributo 
+        para los objetos incrustados. 
+
+        Al ejecutar una página que contiene un objeto incrustado sin el atributo sandbox, se otorgan al objeto incrustado
+        los mismos permisos que al resto de la página. Esto da permiso implícito a un proveedor externo para ejecutar scripts con los mismos permisos 
+        que usted tiene para esa página, lo cual es una forma de permitir que aparezcan anuncios en su aplicación sin darse cuenta. Por lo tanto, 
+        para evitar conceder permisos implícitos a los objetos incrustados, utilice el atributo sandbox en cualquier etiqueta que contenga un objeto incrustado.
+    </p>
                   
 <p>< <b> iframe src="#página_fuente.html" width="290" height="250"></b>Texto por si el navegador no reconoce la etiqueta <b>< /iframe></b></p>
 
 <ul>
+    <li><b>sandbox</b>: para impedir que un proveedor externo ejecute scripts en nuestra página.</li>
     <li><b>width y heigth</b>: ancho y alto.</li>
     <li><b>frameborder</b>: con la relación 0 el iframe es sin borde, con la relación 1 con borde.</li>
     <li><b>scrolling</b>: habilita las barras de desplazamiento si el contenido no cabe en el iframe. <br>
