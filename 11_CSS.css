@@ -191,8 +191,8 @@ Ejemplos:
 <span style="color:blue">En la misma línea otro texto en span</span>
 
 Nota: Se puede hacer que un span se comporte como un div si en CSS le agrego 
-display:block. Y además, con la propiedad display: inline-block puedo apilar bloques de manera horizontal.
-+info: https://www.w3schools.com/css/css_inline-block.asp
+display:block. Y además, con la propiedad display: inline-block puedo apilar span's 
+dentro de un contenedor de manera horizontal. +info: https://www.w3schools.com/css/css_inline-block.asp
 
 Atributos globales
 
