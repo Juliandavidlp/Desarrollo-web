@@ -133,7 +133,7 @@ p {
 }   
 
 /* 
-Selector de clase (.selector)
+Selector de clase (.class_selector)
 
 Se aplica con un punto (.) seguido del nombre que le asignemos al selector. Dentro
 del documento HTML se lo referencia dentro de la etiqueta usando el atributo class,
@@ -214,6 +214,21 @@ Estos atributos pueden utilizarse con todos los elementos HTML:
 navegador. Cualquier control de formulario o de script dentro de la sección
 hidden será ejecutado, aunque no se muestra al usuario. 
 
+¿Cómo centrar un div?
+
+<section>
+    <h1>Centrado!<\h1>
+<\section>
+
+Dado un contenedor con un h1, primero centrar el contenido de manera
+vertical, después centrar el elemento de manera vertical.
+
+section{
+    align-content: center;
+}
+h1{
+    margin: 0 auto;
+}
 
 Especificidad
 
