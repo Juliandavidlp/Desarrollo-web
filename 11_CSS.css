@@ -103,14 +103,14 @@ hacer" y el selector indica "a quién hay que aplicarlo". Hay cuatro selectores 
 Selector universal (*)
 
 Se indica con un * (asterisco) y aplica el estilo a todos los elementos contenidos en el
-documento HTML. Po ej.:
+documento HTML. Por ej.:
 */
 
 *{
-    margin: 10 px; /*establece el margen para los cuatro lados, si coloco el valor auto; puedo centrar el elemento al que le establece el margen*/
-    padding: 5 px; /*padding establece el espacio de relleno*/
-    background-color: lightgreen; /*cambia el color de relleno*/
-    font-family: Verdana; /*cambia el tipo de letra*/
+    margin: 10 px; /*establece el margen para los cuatro lados, si coloco el valor 0 auto; puedo centrar el elemento de manera horizontal.*/
+    padding: 5 px; /*padding establece el espacio de relleno.*/
+    background-color: lightgreen; /*cambia el color de relleno.*/
+    font-family: Verdana; /*cambia el tipo de letra.*/
 }
 
 /* 
