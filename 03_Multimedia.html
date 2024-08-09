@@ -99,6 +99,11 @@
         los mismos permisos que al resto de la página. Esto da permiso implícito a un proveedor externo para ejecutar scripts con los mismos permisos 
         que usted tiene para esa página, lo cual es una forma de permitir que aparezcan anuncios en su aplicación sin darse cuenta. Por lo tanto, 
         para evitar conceder permisos implícitos a los objetos incrustados, utilice el atributo sandbox en cualquier etiqueta que contenga un objeto incrustado.
+
+        Atención: Hay un componente que se llama lite-youtube que se puede usar con cualquier framework, con vanilla JavaScript que no le hace daño al rendimiento de tu web y 
+        no espía tus usuarios que se carga en el head con: <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
+        Existe en: https://github.com/justinribeiro/lite-youtube y funciona igual. Se usa con el siguiente web component: <lite-youtube videoid="id del video"></lite-youtube>   
+        Es una alternativa mejor a la etiqueta Iframe.
     </p>
                   
 <p>< <b> iframe src="#página_fuente.html" width="290" height="250"></b>Texto por si el navegador no reconoce la etiqueta <b>< /iframe></b></p>
