@@ -136,7 +136,7 @@ p {
 Selector de clase (.class_selector)
 
 Se aplica con un punto (.) seguido del nombre que le asignemos al selector. Dentro
-del documento HTML se lo referencia dentro de la etiqueta usando el atributo class,
+del documento HTML se lo referencia dentro de la etiqueta o el container usando el atributo class,
 con la siguiente estructura: class=“nombredelselector”. Por ejemplo: 
 */
 
