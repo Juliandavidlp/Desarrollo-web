@@ -243,7 +243,8 @@ de su ancestro.
 
 La especificidad hace referencia a la relevancia que tiene un estilo sobre un elemento
 de la página al cual le están afectando varios estilos de CSS al mismo tiempo. Es decir,
-hace referencia al grado de importancia de un estilo sobre otro.
+hace referencia al grado de importancia de un estilo sobre otro cuando múltiples estilos
+se les aplican a un mismo elemento.
 
 La siguiente tabla muestra los niveles de especificidad, desde los más específicos a
 los más generales:
