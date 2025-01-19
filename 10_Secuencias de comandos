@@ -1,35 +1,56 @@
 <p>HTML Scripting. 
 
-Tras leer este artículo, podrás definir las secuencias de comandos, explicar cómo los navegadores las habilitan e identificar los descriptores de acceso al árbol DOM.
-El uso de secuencias de comandos en un sitio web, normalmente mediante JavaScript, se puede realizar directamente en el código HTML, dentro de la etiqueta `script`, <br>
-o en un archivo independiente llamado desde el código HTML. La creación de scripts proporciona una experiencia de usuario más interactiva al navegar por sitios web.<br>
-Se puede utilizar para diversas tareas, como la validación de formularios, el cambio dinámico del contenido de un sitio web y la manipulación de imágenes. <br>
+Tras ver este artículo, podrás definir las secuencias de comandos, explicar cómo los navegadores las habilitan e identificar los descriptores de acceso al árbol DOM.
+
+El uso de secuencias de comandos en un sitio web, normalmente mediante JavaScript, se puede realizar directamente en el código HTML, dentro de la etiqueta `script`, 
+o en un archivo independiente llamado desde el código HTML. La creación de scripts proporciona una experiencia de usuario más interactiva al navegar por sitios web. 
+Se puede utilizar para diversas tareas, como la validación de formularios, el cambio dinámico del contenido de un sitio web y la manipulación de imágenes. 
 Como las secuencias de comandos se pueden desactivar, se recomienda utilizar secuencias de comandos pero no confiar en ellas. 
 
-Las secuencias de comandos están habilitadas para el contexto del navegador cuando se cumplen las condiciones siguientes: <br>
-El navegador en uso admite la creación de secuencias de comandos y el usuario tiene habilitadas las secuencias de comandos. 
+Las secuencias de comandos están habilitadas para el contexto del navegador cuando se cumplen las condiciones siguientes: 
+el navegador en uso admite la creación de secuencias de comandos y el usuario tiene habilitadas las secuencias de comandos. 
 
-HTML5 también define un tipo de medio aislado que especifica un conjunto adicional de restricciones de contenido y se puede utilizar para alojar contenido que no sea de confianza. <br>
-Este contexto de navegación aislado puede configurarse a nivel de página o especificarse como un atributo para los objetos incrustados. <br>
-Al ejecutar una página que contiene un objeto incrustado sin el atributo sandbox, se otorgan al objeto incrustado los mismos permisos que al resto de la página. <br>
-Esto da permiso implícito a un proveedor externo para ejecutar scripts con los mismos permisos que usted tiene para esa página, lo cual es una forma de permitir que aparezcan anuncios en su aplicación sin darse cuenta.<br>
-Por lo tanto, para evitar conceder permisos implícitos a los objetos incrustados, utilice el atributo sandbox en cualquier etiqueta que contenga un objeto incrustado.
+HTML5 también define un tipo de medio aislado que especifica un conjunto adicional de restricciones de contenido y se puede utilizar para alojar contenido que no sea de confianza.
+Este contexto de navegación aislado puede configurarse a nivel de página o especificarse como un atributo sandbox para los objetos incrustados. Por ejemplo, en un iframe... 
+Al ejecutar una página que contiene un objeto incrustado sin el atributo sandbox, se otorgan al objeto incrustado los mismos permisos que al resto de la página.
+Esto da permiso implícito a un proveedor externo para ejecutar scripts con los mismos permisos que usted tiene para esa página, 
+lo cual es una forma de permitir que aparezcan anuncios en su aplicación sin darse cuenta. Por lo tanto, para evitar conceder permisos implícitos a los objetos incrustados,
+utilice el atributo sandbox en cualquier etiqueta que contenga un objeto incrustado.
 
-Cada documento HTML que se carga en una página del navegador se convierte en un objeto Document. El objeto Document proporciona acceso a todos los elementos HTML de una página y se puede acceder a él desde un script.<br>
-Los descriptores de acceso del árbol DOM son API´s de documentos HTML que proporcionan acceso a todos los elementos HTML de una página. La propiedad a la que se accede lleva el prefijo del documento de Word. <br>
-Por ejemplo, document.head devuelve el primer elemento principal del elemento html, si lo hay; de lo contrario, es nulo. La función document.images devuelve una colección HTML de los elementos de imagen del documento.<br>
-La función document.scripts devuelve una colección HTML de los elementos del script del documento.
+      Cada documento HTML que se carga en una página del navegador se convierte en un objeto del documento. 
+      El Document Object proporciona acceso a todos los elementos HTML de una página y se puede acceder a él desde un script. 
+      Los descriptores de acceso del árbol DOM son API´s de documentos HTML que proporcionan acceso a todos los elementos HTML de una página.
+      La propiedad a la que se accede lleva el prefijo del documento de Word. Por ejemplo, document.head devuelve el primer elemento principal del elemento html,
+      si lo hay; de lo contrario, es nulo. La función document.images devuelve una colección HTML de los elementos de imagen del documento. 
+      La función document.scripts devuelve una colección HTML de los elementos del script del documento.
 
-Estos son algunos de los métodos más comunes del árbol DOM HTML: 
+      Estos son algunos de los métodos más comunes del árbol DOM HTML: 
       
-• La función document.getElementById ('id') tiene un parámetro obligatorio que es el identificador del elemento al que se quiere acceder. <br>
-El identificador se especifica como un atributo en uno de los elementos que está codificado en otra parte de la página. 
+    • La función document.getElementById ('id') tiene un parámetro obligatorio que es el identificador del elemento al que se quiere acceder. 
+      El identificador se especifica como un atributo en uno de los elementos que está codificado en otra parte de la página. 
       
-• La función document.getElementsByTagName ('tag') tiene un parámetro obligatorio que es el nombre de etiqueta del elemento al que se quiere acceder. <br>
-Esta función devuelve una lista de nodos de todos los elementos cuya etiqueta coincida con el parámetro requerido. 
+    • La función document.getElementsByTagName ('tag') tiene un parámetro obligatorio que es el nombre de etiqueta del elemento al que se quiere acceder. 
+      Esta función devuelve una lista de nodos de todos los elementos cuya etiqueta coincida con el parámetro requerido. 
+
+<script type="text/javascript">
+function textChecker() {
+	var textField1 = document.getElementById('textField1');
+  if (textField1.value == "") {
+  	alert("Please, type in the Field")
+  }
+	else {
+  	alert("You entered: " + textField1.value)
+  }
+
+}
+</script>
+<body>
+  <input type="text" id='textField1'>
+  <input type="button" onClick="textChecker()" Value='Submit'>
+</body>
+
       
-En este artículo, aprendió que las secuencias de comandos se utilizan para proporcionar una experiencia de usuario más interactiva al navegar por sitios web. <br>
-Como las secuencias de comandos se pueden desactivar, se recomienda utilizar secuencias de comandos pero no confiar en ellas. <br>
-La creación de scripts está habilitada cuando se cumplen determinadas condiciones del navegador. <br>
-Los entornos limitados de HTML5 permiten gestionar combinaciones de iframes, es decir, páginas web que extraen contenido de más de un sitio.<br>
-Los documentos HTML cargados en una página del navegador se convierten en objetos Document, a los que puede acceder mediante scripts. </p>
+En este artículo, aprendió que las secuencias de comandos se utilizan para proporcionar una experiencia de usuario más interactiva al navegar por sitios web. 
+Como las secuencias de comandos se pueden desactivar, se recomienda utilizar secuencias de comandos pero no confiar en ellas. La creación de scripts está habilitada 
+cuando se cumplen determinadas condiciones del navegador. Los entornos limitados de HTML5 permiten gestionar combinaciones de iframes, es decir, páginas web que extraen contenido de más de un sitio. 
+Los documentos HTML cargados en una página del navegador se convierten en objetos Document, a los que puede acceder mediante scripts.</p>
