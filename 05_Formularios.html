@@ -134,15 +134,34 @@
 
     <h3>La etiqueta fieldset</h3>
     <p><b>< fieldset></b>: define una sección en un formulario y permite agrupar sus campos. El elemento <b>< legend></b> puede contener a otros elementos o se puede utilizar para definir un título. <br>
-        Puede contener los atributos <b>name, value o id</b> como otros campos, como el input. Por ejemplo:
+        Puede contener los atributos <b>name, value o id</b> como otros campos, como el input. Y además, <b>disabled y form</b>, para especificar a qué formulario se corresponde la sección. Por ejemplo:
     </p>
-   <!--Los estilos se definen con CSS.-->
-    <fieldset name="Las cuatro estaciones" value="1" id="#"><legend>Seleccione una opción:</legend> 
-        <input type="radio" name="opción" value="1">Otoño
-        <input type="radio" name="opción" value="2">Invierno <br>
-        <input type="radio" name="opción" value="3">Primavera
-        <input type="radio" name="opción" value="4">Verano
-    </fieldset>
+
+    <form>
+        <fieldset name="Las cuatro estaciones" value="1" id="#">
+            <legend>Seleccione una opción:</legend> 
+            <input type="radio" name="opción" value="1">Otoño
+            <input type="radio" name="opción" value="2">Invierno <br>
+            <input type="radio" name="opción" value="3">Primavera
+            <input type="radio" name="opción" value="4">Verano
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset name="personal_details"> 
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"><br>
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+        
     <br><br>
 
     <h3>La etiqueta textarea</h3>
