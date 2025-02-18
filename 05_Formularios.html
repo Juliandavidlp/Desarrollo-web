@@ -196,7 +196,21 @@
         <option value="3">Dulce de leche granizado</option>
         <option value="4">Tramontana</option>
     </select>
-    
+
+
+    Si quiero mostrar un título en mi menú de selección puedo usar la etiqueta option pero indicar con dos atributos sin valor que la opción en sí está deshabilitada,
+    pero está seleccionada por defecto: <option disabled selected value="">Sport</option>
+        
+        <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        <select name="sport">
+            <option disabled selected value="">Sport</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Soccer">Soccer</option>
+            <option value="Ultimate Frisbee">Ultimate Frisbee</option>
+        </select>
+    </form>
     <br><br>
 
     <footer>
